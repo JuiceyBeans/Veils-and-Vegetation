@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class UbergrowthBlocks {
     public static List<Block> blocks = new ArrayList<>();
 
