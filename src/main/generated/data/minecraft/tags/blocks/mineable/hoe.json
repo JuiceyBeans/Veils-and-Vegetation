@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "ubergrowth:oak_foliage",
+    "ubergrowth:spruce_foliage",
+    "ubergrowth:birch_foliage",
+    "ubergrowth:jungle_foliage",
+    "ubergrowth:acacia_foliage",
+    "ubergrowth:dark_oak_foliage",
+    "ubergrowth:mangrove_foliage",
+    "ubergrowth:cherry_foliage",
+    "ubergrowth:azalea_foliage",
+    "ubergrowth:flowering_azalea_foliage",
+    "ubergrowth:glowberry_creeps",
+    "ubergrowth:fruiting_glowberry_creeps",
+    "ubergrowth:bare_glowberry_creeps",
+    "ubergrowth:fruiting_sweet_berry_foliage",
+    "ubergrowth:sweet_berry_foliage",
+    "ubergrowth:bamboo_foliage",
+    "ubergrowth:grass_shoots",
+    "ubergrowth:moss_clumps",
+    "ubergrowth:aqua_goo_nodes",
+    "ubergrowth:ochre_goo_nodes",
+    "ubergrowth:pearlescent_goo_nodes",
+    "ubergrowth:verdant_goo_nodes",
+    "ubergrowth:aqua_goo_hyphae",
+    "ubergrowth:ochre_goo_hyphae",
+    "ubergrowth:pearlescent_goo_hyphae",
+    "ubergrowth:verdant_goo_hyphae",
+    "ubergrowth:beached_kelp",
+    "ubergrowth:beached_sea_grass"
+  ]
+}
