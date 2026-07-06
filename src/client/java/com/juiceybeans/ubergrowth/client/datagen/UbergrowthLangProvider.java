@@ -10,5 +10,6 @@ public class UbergrowthLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder builder) {
+        builder.add("itemGroup.ubergrowth.ubergrowth_blocks", "Ubergrowth Blocks");
     }
 }
