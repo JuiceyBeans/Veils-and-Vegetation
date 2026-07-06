@@ -22,7 +22,7 @@
 			"com.juiceybeans.ubergrowth.client.UbergrowthClient"
 		],
 		"fabric-datagen": [
-			"com.juiceybeans.ubergrowth.client.datagen.UbergrowthDataGenerator"
+          "com.juiceybeans.ubergrowth.client.datagen.UbergrowthDataGenerators"
 		]
 	},
 	"mixins": [
