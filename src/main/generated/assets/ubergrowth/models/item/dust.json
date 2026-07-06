@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ubergrowth:block/dust"
+    "layer0": "ubergrowth:item/dust"
   }
 }

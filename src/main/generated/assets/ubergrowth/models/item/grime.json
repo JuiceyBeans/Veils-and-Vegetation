@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ubergrowth:block/grime"
+    "layer0": "ubergrowth:item/grime"
   }
 }
