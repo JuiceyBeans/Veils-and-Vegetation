@@ -11,5 +11,6 @@ public class UbergrowthDataGenerators implements DataGeneratorEntrypoint {
         pack.addProvider(UbergrowthRecipeGenerator::new);
         pack.addProvider(UbergrowthModelGenerator::new);
         pack.addProvider(UbergrowthLangGenerator::new);
+        pack.addProvider(UbergrowthLootTableGenerator::new);
 	}
 }
