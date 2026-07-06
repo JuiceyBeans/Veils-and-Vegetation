@@ -11,7 +11,22 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:fruiting_red_hyphae"
+          "name": "ubergrowth:red_hyphae"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:red_mushroom"
         }
       ],
       "rolls": 1.0

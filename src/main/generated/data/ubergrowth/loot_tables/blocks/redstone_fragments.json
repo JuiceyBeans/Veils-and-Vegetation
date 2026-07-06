@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:redstone_fragments"
+          "name": "minecraft:redstone"
         }
       ],
       "rolls": 1.0

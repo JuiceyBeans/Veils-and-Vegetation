@@ -5,13 +5,17 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
+          "chance": 0.05,
+          "condition": "minecraft:random_chance"
+        },
+        {
           "condition": "minecraft:survives_explosion"
         }
       ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:spruce_foliage"
+          "name": "minecraft:spruce_sapling"
         }
       ],
       "rolls": 1.0

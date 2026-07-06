@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:gold_ore_fragments"
+          "name": "minecraft:gold_ore"
         }
       ],
       "rolls": 1.0

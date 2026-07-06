@@ -5,13 +5,17 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
+          "chance": 0.05,
+          "condition": "minecraft:random_chance"
+        },
+        {
           "condition": "minecraft:survives_explosion"
         }
       ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:flowering_azalea_foliage"
+          "name": "minecraft:flowering_azalea"
         }
       ],
       "rolls": 1.0

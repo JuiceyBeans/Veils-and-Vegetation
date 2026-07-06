@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:oak_creeps"
+          "name": "minecraft:stick"
         }
       ],
       "rolls": 1.0

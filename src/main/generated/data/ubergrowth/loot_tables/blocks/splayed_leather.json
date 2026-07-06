@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:splayed_leather"
+          "name": "minecraft:leather"
         }
       ],
       "rolls": 1.0

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:iron_ore_fragments"
+          "name": "minecraft:iron_ore"
         }
       ],
       "rolls": 1.0

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:clay_smattering"
+          "name": "minecraft:clay_ball"
         }
       ],
       "rolls": 1.0

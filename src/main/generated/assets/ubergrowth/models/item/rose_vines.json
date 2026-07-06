@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ubergrowth:block/rose_veins"
+    "layer0": "ubergrowth:block/rose_vines"
   }
 }

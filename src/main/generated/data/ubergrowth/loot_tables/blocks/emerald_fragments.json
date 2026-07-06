@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:emerald_fragments"
+          "name": "minecraft:emerald"
         }
       ],
       "rolls": 1.0

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:nether_wart_sprouts"
+          "name": "minecraft:nether_wart"
         }
       ],
       "rolls": 1.0

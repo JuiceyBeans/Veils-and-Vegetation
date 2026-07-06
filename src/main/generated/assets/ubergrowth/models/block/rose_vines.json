@@ -1,6 +1,6 @@
 {
   "parent": "ubergrowth:block/ubergrowth_multiface",
   "textures": {
-    "texture": "ubergrowth:block/rose_veins"
+    "texture": "ubergrowth:block/rose_vines"
   }
 }

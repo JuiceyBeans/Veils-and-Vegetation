@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:copper_ore_fragments"
+          "name": "minecraft:copper_ore"
         }
       ],
       "rolls": 1.0

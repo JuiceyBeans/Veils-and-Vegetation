@@ -25,9 +25,9 @@ public class UbergrowthBlocks {
     }
 
     public static final Block TACKED_PAPER = registerBlock("tacked_paper", new UbergrowthBlock(FabricBlockSettings.of().burnable().instabreak()));
-    public static final Block TACKED_NOTES = registerBlock("tacked_notes", new UbergrowthBlock(FabricBlockSettings.of()));
-    public static final Block SPLAYED_LEATHER = registerBlock("splayed_leather", new UbergrowthBlock(FabricBlockSettings.of()));
-    public static final Block SPLAYED_HIDE = registerBlock("splayed_hide", new UbergrowthBlock(FabricBlockSettings.of()));
+    public static final Block TACKED_NOTES = registerBlock("tacked_notes", new UbergrowthBlock(FabricBlockSettings.of().burnable().instabreak()));
+    public static final Block SPLAYED_LEATHER = registerBlock("splayed_leather", new UbergrowthBlock(FabricBlockSettings.of().burnable().instabreak()));
+    public static final Block SPLAYED_HIDE = registerBlock("splayed_hide", new UbergrowthBlock(FabricBlockSettings.of().burnable().instabreak()));
     public static final Block STONE_BRICK_CHUNKS = registerBlock("stone_brick_chunks", new UbergrowthBlock(FabricBlockSettings.of()));
     public static final Block MOSSY_STONE_BRICK_CHUNKS = registerBlock("mossy_stone_brick_chunks", new UbergrowthBlock(FabricBlockSettings.of()));
     public static final Block BRICK_CHUNKS = registerBlock("brick_chunks", new UbergrowthBlock(FabricBlockSettings.of()));
@@ -82,7 +82,7 @@ public class UbergrowthBlocks {
     public static final Block NETHER_WART_SPROUTS = registerBlock("nether_wart_sprouts", new UbergrowthBlock(FabricBlockSettings.of()));
     public static final Block CRIMSON_VINES = registerBlock("crimson_vines", new UbergrowthBlock(FabricBlockSettings.of()));
     public static final Block ROSE_CREEPS = registerBlock("rose_creeps", new UbergrowthBlock(FabricBlockSettings.of()));
-    public static final Block ROSE_VEINS = registerBlock("rose_veins", new UbergrowthBlock(FabricBlockSettings.of()));
+    public static final Block ROSE_VINES = registerBlock("rose_vines", new UbergrowthBlock(FabricBlockSettings.of()));
     public static final Block WARPED_GROWTHS = registerBlock("warped_growths", new UbergrowthBlock(FabricBlockSettings.of()));
     public static final Block WARPED_VINES = registerBlock("warped_vines", new UbergrowthBlock(FabricBlockSettings.of()));
     public static final Block BUDDING_WARPED_VINES = registerBlock("budding_warped_vines", new UbergrowthBlock(FabricBlockSettings.of()));

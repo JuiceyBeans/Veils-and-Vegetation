@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:budding_warped_hyphae"
+          "name": "ubergrowth:warped_hyphae"
         }
       ],
       "rolls": 1.0
