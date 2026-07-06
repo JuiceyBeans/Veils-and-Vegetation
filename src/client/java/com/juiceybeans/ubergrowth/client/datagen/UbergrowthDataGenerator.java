@@ -9,5 +9,6 @@ public class UbergrowthDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = generator.createPack();
 
         pack.addProvider(UbergrowthRecipeProvider::new);
+        pack.addProvider(UbergrowthModelProvider::new);
 	}
 }
