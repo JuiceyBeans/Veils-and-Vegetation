@@ -1,7 +1,7 @@
 package com.juiceybeans.ubergrowth.client.datagen;
 
 import com.juiceybeans.ubergrowth.Ubergrowth;
-import com.juiceybeans.ubergrowth.init.ModBlocks;
+import com.juiceybeans.ubergrowth.init.UbergrowthBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -27,7 +27,7 @@ public class UbergrowthModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators generator) {
-        for (Block block : ModBlocks.blocks) {
+        for (Block block : UbergrowthBlocks.blocks) {
             generator.createMultiface(block);
             MULTIFACE_TEMPLATE.create(block, new TextureMapping().put(TextureSlot.TEXTURE,
                     Ubergrowth.id("block/" + BuiltInRegistries.BLOCK.getKey(block).getPath())), generator.modelOutput);

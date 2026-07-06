@@ -1,7 +1,8 @@
 package com.juiceybeans.ubergrowth;
 
-import com.juiceybeans.ubergrowth.init.ModBlocks;
+import com.juiceybeans.ubergrowth.init.UbergrowthBlocks;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +13,7 @@ public class Ubergrowth implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-        ModBlocks.initialize();
+        UbergrowthBlocks.initialize();
 	}
 
 	public static ResourceLocation id(String path) {
