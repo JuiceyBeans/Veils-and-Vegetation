@@ -11,10 +11,18 @@ import net.minecraft.world.level.block.MultifaceSpreader;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class SpreadableUbergrowthBlock extends BaseUbergrowthBlock implements BonemealableBlock {
-    private final MultifaceSpreader spreader = new MultifaceSpreader(this);
+    private MultifaceSpreader spreader;
+    private BaseUbergrowthBlock spreadBlock;
 
     public SpreadableUbergrowthBlock(Properties properties) {
         super(properties);
+        this.spreadBlock = this;
+        this.spreader = new MultifaceSpreader(spreadBlock);
+    }
+
+    public void setSpreadBlock(BaseUbergrowthBlock spreadBlock) {
+        this.spreadBlock = spreadBlock;
+        this.spreader = new MultifaceSpreader(spreadBlock);
     }
 
     @Override
@@ -29,7 +37,8 @@ public class SpreadableUbergrowthBlock extends BaseUbergrowthBlock implements Bo
 
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
-        this.spreader.spreadFromRandomFaceTowardRandomDirection(state, level, pos, random);
+        this.spreader.spreadFromRandomFaceTowardRandomDirection(spreadBlock.withPropertiesOf(state)
+                .trySetValue(WaterloggableUbergrowthBlock.WATERLOGGED, false), level, pos, random);
     }
 
     @Override

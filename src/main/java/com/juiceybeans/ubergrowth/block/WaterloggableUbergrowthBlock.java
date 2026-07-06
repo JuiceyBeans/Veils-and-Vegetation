@@ -15,7 +15,7 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 
 public class WaterloggableUbergrowthBlock extends BaseUbergrowthBlock implements SimpleWaterloggedBlock {
-    private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     private final boolean isWaterloggable;
 
     public WaterloggableUbergrowthBlock(Properties properties) {

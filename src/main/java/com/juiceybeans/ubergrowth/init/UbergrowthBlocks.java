@@ -89,19 +89,19 @@ public class UbergrowthBlocks {
     public static final Block ROSE_CREEPS = registerBlock("rose_creeps", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block ROSE_VINES = registerBlock("rose_vines", new BonemealableUbergrowthBlock(FabricBlockSettings.of().burnable(), ROSE_CREEPS));
     public static final Block WARPED_GROWTHS = registerBlock("warped_growths", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable()));
-    public static final Block BUDDING_WARPED_VINES = registerBlock("budding_warped_vines", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable()));
+    public static final Block BUDDING_WARPED_VINES = registerBlock("budding_warped_vines", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block WARPED_VINES = registerBlock("warped_vines", new BonemealableUbergrowthBlock(FabricBlockSettings.of().burnable(), BUDDING_WARPED_VINES));
-    public static final Block FRUITING_RED_HYPHAE = registerBlock("fruiting_red_hyphae", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable()));
+    public static final Block FRUITING_RED_HYPHAE = registerBlock("fruiting_red_hyphae", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block RED_HYPHAE = registerBlock("red_hyphae", new BonemealableUbergrowthBlock(FabricBlockSettings.of().burnable(), FRUITING_RED_HYPHAE));
-    public static final Block FRUITING_BROWN_HYPHAE = registerBlock("fruiting_brown_hyphae", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable().lightLevel(1)));
+    public static final Block FRUITING_BROWN_HYPHAE = registerBlock("fruiting_brown_hyphae", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable().lightLevel(1)));
     public static final Block BROWN_HYPHAE = registerBlock("brown_hyphae", new BonemealableUbergrowthBlock(FabricBlockSettings.of().burnable(), FRUITING_BROWN_HYPHAE));
     public static final Block DEAD_CREEPS = registerBlock("dead_creeps", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block ARCHAIC_CREEPS = registerBlock("archaic_creeps", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block ROOT_CREEPS = registerBlock("root_creeps", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block MYCELIUM_HYPHAE = registerBlock("mycelium_hyphae", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable()));
-    public static final Block BUDDING_CRIMSON_HYPHAE = registerBlock("budding_crimson_hyphae", new BaseUbergrowthBlock(FabricBlockSettings.of()));
+    public static final Block BUDDING_CRIMSON_HYPHAE = registerBlock("budding_crimson_hyphae", new SpreadableUbergrowthBlock(FabricBlockSettings.of()));
     public static final Block CRIMSON_HYPHAE = registerBlock("crimson_hyphae", new BonemealableUbergrowthBlock(FabricBlockSettings.of(), BUDDING_CRIMSON_HYPHAE));
-    public static final Block BUDDING_WARPED_HYPHAE = registerBlock("budding_warped_hyphae", new BaseUbergrowthBlock(FabricBlockSettings.of()));
+    public static final Block BUDDING_WARPED_HYPHAE = registerBlock("budding_warped_hyphae", new SpreadableUbergrowthBlock(FabricBlockSettings.of()));
     public static final Block WARPED_HYPHAE = registerBlock("warped_hyphae", new BonemealableUbergrowthBlock(FabricBlockSettings.of(), BUDDING_WARPED_HYPHAE));
     public static final Block OAK_FOLIAGE = registerBlock("oak_foliage", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block SPRUCE_FOLIAGE = registerBlock("spruce_foliage", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable()));
@@ -113,7 +113,7 @@ public class UbergrowthBlocks {
     public static final Block CHERRY_FOLIAGE = registerBlock("cherry_foliage", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block AZALEA_FOLIAGE = registerBlock("azalea_foliage", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block FLOWERING_AZALEA_FOLIAGE = registerBlock("flowering_azalea_foliage", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable()));
-    public static final Block FRUITING_GLOWBERRY_CREEPS = registerBlock("fruiting_glowberry_creeps", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable().lightLevel(14)));
+    public static final Block FRUITING_GLOWBERRY_CREEPS = registerBlock("fruiting_glowberry_creeps", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable().lightLevel(14)));
     public static final Block GLOWBERRY_CREEPS = registerBlock("glowberry_creeps", new BonemealableUbergrowthBlock(FabricBlockSettings.of().burnable(), FRUITING_GLOWBERRY_CREEPS));
     public static final Block BARE_GLOWBERRY_CREEPS = registerBlock("bare_glowberry_creeps", new BonemealableUbergrowthBlock(FabricBlockSettings.of().burnable(), GLOWBERRY_CREEPS));
     public static final Block FRUITING_SWEET_BERRY_FOLIAGE = registerBlock("fruiting_sweet_berry_foliage", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable()));
@@ -121,10 +121,10 @@ public class UbergrowthBlocks {
     public static final Block BAMBOO_FOLIAGE = registerBlock("bamboo_foliage", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block GRASS_SHOOTS = registerBlock("grass_shoots", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable()));
     public static final Block MOSS_CLUMPS = registerBlock("moss_clumps", new SpreadableUbergrowthBlock(FabricBlockSettings.of().burnable()));
-    public static final Block AQUA_GOO_NODES = registerBlock("aqua_goo_nodes", new BaseUbergrowthBlock(FabricBlockSettings.of().lightLevel(4)));
-    public static final Block OCHRE_GOO_NODES = registerBlock("ochre_goo_nodes", new BaseUbergrowthBlock(FabricBlockSettings.of().lightLevel(4)));
-    public static final Block PEARLESCENT_GOO_NODES = registerBlock("pearlescent_goo_nodes", new BaseUbergrowthBlock(FabricBlockSettings.of().lightLevel(4)));
-    public static final Block VERDANT_GOO_NODES = registerBlock("verdant_goo_nodes", new BaseUbergrowthBlock(FabricBlockSettings.of().lightLevel(4)));
+    public static final Block AQUA_GOO_NODES = registerBlock("aqua_goo_nodes", new SpreadableUbergrowthBlock(FabricBlockSettings.of().lightLevel(4)));
+    public static final Block OCHRE_GOO_NODES = registerBlock("ochre_goo_nodes", new SpreadableUbergrowthBlock(FabricBlockSettings.of().lightLevel(4)));
+    public static final Block PEARLESCENT_GOO_NODES = registerBlock("pearlescent_goo_nodes", new SpreadableUbergrowthBlock(FabricBlockSettings.of().lightLevel(4)));
+    public static final Block VERDANT_GOO_NODES = registerBlock("verdant_goo_nodes", new SpreadableUbergrowthBlock(FabricBlockSettings.of().lightLevel(4)));
     public static final Block AQUA_GOO_HYPHAE = registerBlock("aqua_goo_hyphae", new SpreadableUbergrowthBlock(FabricBlockSettings.of().lightLevel(8)));
     public static final Block OCHRE_GOO_HYPHAE = registerBlock("ochre_goo_hyphae", new SpreadableUbergrowthBlock(FabricBlockSettings.of().lightLevel(8)));
     public static final Block PEARLESCENT_GOO_HYPHAE = registerBlock("pearlescent_goo_hyphae", new SpreadableUbergrowthBlock(FabricBlockSettings.of().lightLevel(8)));
@@ -164,5 +164,15 @@ public class UbergrowthBlocks {
     public static final Block SHODDY_CHERRY_PLANKS = registerBlock("shoddy_cherry_planks", new WaterloggableUbergrowthBlock(FabricBlockSettings.of().burnable()));
 
     public static void initialize() {
+        ((SpreadableUbergrowthBlock) BUDDING_WARPED_VINES).setSpreadBlock((BaseUbergrowthBlock) WARPED_VINES);
+        ((SpreadableUbergrowthBlock) FRUITING_RED_HYPHAE).setSpreadBlock((BaseUbergrowthBlock) RED_HYPHAE);
+        ((SpreadableUbergrowthBlock) FRUITING_BROWN_HYPHAE).setSpreadBlock((BaseUbergrowthBlock) BROWN_HYPHAE);
+        ((SpreadableUbergrowthBlock) BUDDING_CRIMSON_HYPHAE).setSpreadBlock((BaseUbergrowthBlock) BUDDING_CRIMSON_HYPHAE);
+        ((SpreadableUbergrowthBlock) BUDDING_WARPED_HYPHAE).setSpreadBlock((BaseUbergrowthBlock) BUDDING_WARPED_HYPHAE);
+        ((SpreadableUbergrowthBlock) FRUITING_GLOWBERRY_CREEPS).setSpreadBlock((BaseUbergrowthBlock) GLOWBERRY_CREEPS);
+        ((SpreadableUbergrowthBlock) AQUA_GOO_NODES).setSpreadBlock((BaseUbergrowthBlock) AQUA_GOO_HYPHAE);
+        ((SpreadableUbergrowthBlock) OCHRE_GOO_NODES).setSpreadBlock((BaseUbergrowthBlock) OCHRE_GOO_HYPHAE);
+        ((SpreadableUbergrowthBlock) PEARLESCENT_GOO_NODES).setSpreadBlock((BaseUbergrowthBlock) PEARLESCENT_GOO_HYPHAE);
+        ((SpreadableUbergrowthBlock) VERDANT_GOO_NODES).setSpreadBlock((BaseUbergrowthBlock) VERDANT_GOO_HYPHAE);
     }
 }
