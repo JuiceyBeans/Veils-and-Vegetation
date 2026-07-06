@@ -14,14 +14,14 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.Optional;
 
-public class UbergrowthModelProvider extends FabricModelProvider {
+public class UbergrowthModelGenerator extends FabricModelProvider {
     private static final ModelTemplate MULTIFACE_TEMPLATE = new ModelTemplate(
             Optional.of(Ubergrowth.id("block/ubergrowth_multiface")),
             Optional.empty(),
             TextureSlot.TEXTURE
     );
 
-    public UbergrowthModelProvider(FabricDataOutput output) {
+    public UbergrowthModelGenerator(FabricDataOutput output) {
         super(output);
     }
 

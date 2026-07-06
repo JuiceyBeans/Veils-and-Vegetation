@@ -9,8 +9,8 @@ import net.minecraft.world.level.block.Block;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public class UbergrowthLangProvider extends FabricLanguageProvider {
-    protected UbergrowthLangProvider(FabricDataOutput dataOutput) {
+public class UbergrowthLangGenerator extends FabricLanguageProvider {
+    protected UbergrowthLangGenerator(FabricDataOutput dataOutput) {
         super(dataOutput);
     }
 

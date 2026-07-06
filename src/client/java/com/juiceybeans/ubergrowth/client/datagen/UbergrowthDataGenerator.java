@@ -8,8 +8,8 @@ public class UbergrowthDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator generator) {
         FabricDataGenerator.Pack pack = generator.createPack();
 
-        pack.addProvider(UbergrowthRecipeProvider::new);
-        pack.addProvider(UbergrowthModelProvider::new);
-        pack.addProvider(UbergrowthLangProvider::new);
+        pack.addProvider(UbergrowthRecipeGenerator::new);
+        pack.addProvider(UbergrowthModelGenerator::new);
+        pack.addProvider(UbergrowthLangGenerator::new);
 	}
 }
