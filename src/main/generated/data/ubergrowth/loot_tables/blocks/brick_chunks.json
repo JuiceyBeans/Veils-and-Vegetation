@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:sandstone_chunks"
+          "name": "ubergrowth:brick_chunks"
         }
       ],
       "rolls": 1.0

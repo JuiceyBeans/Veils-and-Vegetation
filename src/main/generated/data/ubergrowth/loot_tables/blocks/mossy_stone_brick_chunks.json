@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ubergrowth:granite_chunks"
+          "name": "ubergrowth:mossy_stone_brick_chunks"
         }
       ],
       "rolls": 1.0
