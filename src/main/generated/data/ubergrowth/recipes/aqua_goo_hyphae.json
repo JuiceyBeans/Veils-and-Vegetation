@@ -3,16 +3,14 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:water_bucket"
-    },
-    {
-      "item": "minecraft:slime_ball"
+      "item": "ubergrowth:aqua_goo_nodes"
     },
     {
       "item": "minecraft:bone_meal"
     }
   ],
   "result": {
+    "count": 2,
     "item": "ubergrowth:aqua_goo_hyphae"
   }
 }
