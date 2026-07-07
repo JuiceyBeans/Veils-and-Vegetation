@@ -1,6 +1,7 @@
 package com.juiceybeans.ubergrowth;
 
 import com.juiceybeans.ubergrowth.init.*;
+import com.juiceybeans.ubergrowth.network.UbergrowthNetworking;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -10,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 public class Ubergrowth implements ModInitializer {
 	public static final String MOD_ID = "ubergrowth";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {
@@ -19,6 +20,9 @@ public class Ubergrowth implements ModInitializer {
         UbergrowthFuels.registerFuels();
         UbergrowthCompostables.registerCompostables();
         UbergrowthOxidizables.registerOxidizables();
+        UbergrowthBlockEntityTypes.initialize();
+        UbergrowthMenus.registerAll();
+        UbergrowthNetworking.registerServerReceivers();
 	}
 
 	public static ResourceLocation id(String path) {

@@ -27,7 +27,7 @@ public class UbergrowthBlocks {
     }
 
     public static final Block TACKED_PAPER = registerBlock("tacked_paper", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable().instabreak()));
-    public static final Block TACKED_NOTES = registerBlock("tacked_notes", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable().instabreak()));
+    public static final Block TACKED_NOTES = registerBlock("tacked_notes", new TackedNotesBlock(FabricBlockSettings.of().burnable().instabreak()));
     public static final Block SPLAYED_LEATHER = registerBlock("splayed_leather", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable().instabreak()));
     public static final Block SPLAYED_HIDE = registerBlock("splayed_hide", new BaseUbergrowthBlock(FabricBlockSettings.of().burnable().instabreak()));
     public static final Block STONE_BRICK_CHUNKS = registerBlock("stone_brick_chunks", new WaterloggableUbergrowthBlock(FabricBlockSettings.of()));
