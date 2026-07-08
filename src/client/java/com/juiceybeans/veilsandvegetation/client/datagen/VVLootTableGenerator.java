@@ -80,24 +80,12 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         dropItemWithChanceMultiface(GRAVEL_SMATTERING, Items.FLINT, 0.1f);
 
         dropOtherMultiface(SLIME_GLOBULES, Items.SLIME_BALL);
-        dropOtherMultiface(NETHER_WART_SPROUTS, Items.NETHER_WART);
         dropOtherMultiface(BUDDING_WARPED_VINES, WARPED_VINES);
 
         createFruitingTable(FRUITING_RED_HYPHAE, RED_HYPHAE, Items.RED_MUSHROOM);
         createFruitingTable(FRUITING_BROWN_HYPHAE, BROWN_HYPHAE, Items.BROWN_MUSHROOM);
         dropOtherMultiface(BUDDING_CRIMSON_HYPHAE, CRIMSON_HYPHAE);
         dropOtherMultiface(BUDDING_WARPED_HYPHAE, WARPED_HYPHAE);
-
-        createShearsOrSilkTouchOrChancedDropTable(OAK_FOLIAGE, Items.OAK_SAPLING, 0.05f);
-        createShearsOrSilkTouchOrChancedDropTable(SPRUCE_FOLIAGE, Items.SPRUCE_SAPLING, 0.05f);
-        createShearsOrSilkTouchOrChancedDropTable(BIRCH_FOLIAGE, Items.BIRCH_SAPLING, 0.05f);
-        createShearsOrSilkTouchOrChancedDropTable(JUNGLE_FOLIAGE, Items.JUNGLE_SAPLING, 0.025f);
-        createShearsOrSilkTouchOrChancedDropTable(ACACIA_FOLIAGE, Items.ACACIA_SAPLING, 0.05f);
-        createShearsOrSilkTouchOrChancedDropTable(DARK_OAK_FOLIAGE, Items.DARK_OAK_SAPLING, 0.05f);
-        createShearsOrSilkTouchOrChancedDropTable(CHERRY_FOLIAGE, Items.CHERRY_SAPLING, 0.05f);
-        createShearsOrSilkTouchOrChancedDropTable(AZALEA_FOLIAGE, Items.AZALEA, 0.05f);
-        createShearsOrSilkTouchOrChancedDropTable(FLOWERING_AZALEA_FOLIAGE, Items.FLOWERING_AZALEA, 0.05f);
-        createShearsOrSilkTouchOrChancedDropTable(GRASS_SHOOTS, Items.WHEAT_SEEDS, 0.125f);
 
         dropOtherMultiface(BEACHED_KELP, Items.KELP);
 
@@ -131,30 +119,7 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         createShoddyPlanksTable(SHODDY_MANGROVE_PLANKS);
         createShoddyPlanksTable(SHODDY_CHERRY_PLANKS);
 
-        createShearsOrSilkTouchTable(DEAD_CREEPS);
-        createShearsOrSilkTouchTable(ARCHAIC_CREEPS);
-        createShearsOrSilkTouchTable(OAK_CREEPS);
-        createShearsOrSilkTouchTable(STRIPPED_OAK_CREEPS);
-        createShearsOrSilkTouchTable(BIRCH_CREEPS);
-        createShearsOrSilkTouchTable(STRIPPED_BIRCH_CREEPS);
-        createShearsOrSilkTouchTable(SPRUCE_CREEPS);
-        createShearsOrSilkTouchTable(STRIPPED_SPRUCE_CREEPS);
-        createShearsOrSilkTouchTable(JUNGLE_CREEPS);
-        createShearsOrSilkTouchTable(STRIPPED_JUNGLE_CREEPS);
-        createShearsOrSilkTouchTable(DARK_OAK_CREEPS);
-        createShearsOrSilkTouchTable(STRIPPED_DARK_OAK_CREEPS);
-        createShearsOrSilkTouchTable(ACACIA_CREEPS);
-        createShearsOrSilkTouchTable(STRIPPED_ACACIA_CREEPS);
-        createShearsOrSilkTouchTable(MANGROVE_CREEPS);
-        createShearsOrSilkTouchTable(STRIPPED_MANGROVE_CREEPS);
-        createShearsOrSilkTouchTable(CHERRY_CREEPS);
-        createShearsOrSilkTouchTable(STRIPPED_CHERRY_CREEPS);
-        createShearsOrSilkTouchTable(WARPED_CREEPS);
-        createShearsOrSilkTouchTable(STRIPPED_WARPED_CREEPS);
-        createShearsOrSilkTouchTable(CRIMSON_CREEPS);
-        createShearsOrSilkTouchTable(STRIPPED_CRIMSON_CREEPS);
-
-        createShearsOrSilkTouchTable(NETHER_WART_SPROUTS);
+        createShearsOrSilkTouchOrFixedDropTable(NETHER_WART_SPROUTS, Items.NETHER_WART);
         createShearsOrSilkTouchTable(CRIMSON_VINES);
         createShearsOrSilkTouchTable(ROSE_CREEPS);
         createShearsOrSilkTouchTable(ROSE_VINES);
@@ -163,26 +128,28 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         createShearsOrSilkTouchTable(RED_HYPHAE);
         createShearsOrSilkTouchTable(BROWN_HYPHAE);
         createShearsOrSilkTouchTable(ROOT_CREEPS);
+        createShearsOrSilkTouchTable(DEAD_CREEPS);
+        createShearsOrSilkTouchTable(ARCHAIC_CREEPS);
         createShearsOrSilkTouchTable(MYCELIUM_HYPHAE);
         createShearsOrSilkTouchTable(CRIMSON_HYPHAE);
         createShearsOrSilkTouchTable(WARPED_HYPHAE);
 
-        createShearsOrSilkTouchTable(OAK_FOLIAGE);
-        createShearsOrSilkTouchTable(SPRUCE_FOLIAGE);
-        createShearsOrSilkTouchTable(BIRCH_FOLIAGE);
-        createShearsOrSilkTouchTable(JUNGLE_FOLIAGE);
-        createShearsOrSilkTouchTable(ACACIA_FOLIAGE);
-        createShearsOrSilkTouchTable(DARK_OAK_FOLIAGE);
-        createShearsOrSilkTouchTable(MANGROVE_FOLIAGE);
-        createShearsOrSilkTouchTable(CHERRY_FOLIAGE);
-        createShearsOrSilkTouchTable(AZALEA_FOLIAGE);
-        createShearsOrSilkTouchTable(FLOWERING_AZALEA_FOLIAGE);
+        createShearsOrSilkTouchOrChancedDropTable(OAK_FOLIAGE, Items.OAK_SAPLING, 0.05f);
+        createShearsOrSilkTouchOrChancedDropTable(SPRUCE_FOLIAGE, Items.SPRUCE_SAPLING, 0.05f);
+        createShearsOrSilkTouchOrChancedDropTable(BIRCH_FOLIAGE, Items.BIRCH_SAPLING, 0.05f);
+        createShearsOrSilkTouchOrChancedDropTable(JUNGLE_FOLIAGE, Items.JUNGLE_SAPLING, 0.025f);
+        createShearsOrSilkTouchOrChancedDropTable(ACACIA_FOLIAGE, Items.ACACIA_SAPLING, 0.05f);
+        createShearsOrSilkTouchOrChancedDropTable(DARK_OAK_FOLIAGE, Items.DARK_OAK_SAPLING, 0.05f);
+        createShearsOrSilkTouchOrChancedDropTable(CHERRY_FOLIAGE, Items.CHERRY_SAPLING, 0.05f);
+        createShearsOrSilkTouchOrChancedDropTable(AZALEA_FOLIAGE, Items.AZALEA, 0.05f);
+        createShearsOrSilkTouchOrChancedDropTable(FLOWERING_AZALEA_FOLIAGE, Items.FLOWERING_AZALEA, 0.05f);
+        createShearsOrSilkTouchOrChancedDropTable(GRASS_SHOOTS, Items.WHEAT_SEEDS, 0.125f);
 
         createShearsOrSilkTouchTable(GLOWBERRY_CREEPS);
         createShearsOrSilkTouchTable(BARE_GLOWBERRY_CREEPS);
         createShearsOrSilkTouchTable(BAMBOO_FOLIAGE);
-        createShearsOrSilkTouchTable(GRASS_SHOOTS);
         createShearsOrSilkTouchTable(MOSS_CLUMPS);
+        createShearsOrSilkTouchTable(MOSS_GROWTH);
 
         createShearsOrSilkTouchTable(AQUA_GOO_HYPHAE);
         createShearsOrSilkTouchTable(OCHRE_GOO_HYPHAE);
@@ -281,11 +248,11 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         this.add(block, builder);
     }
 
-    private void createShearsOrSilkTouchTable(Block block) {
+    private void createShearsOrSilkTouchTable(Block block, ItemLike item) {
         var builder = LootTable.lootTable()
                 .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1.0F))
-                        .add(LootItem.lootTableItem(block).when(HAS_SHEARS_OR_SILK_TOUCH))
+                        .add(LootItem.lootTableItem(item).when(HAS_SHEARS_OR_SILK_TOUCH))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0))));
 
         for (Direction dir : Direction.values()) {
@@ -298,6 +265,10 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         }
 
         this.add(block, builder);
+    }
+
+    private void createShearsOrSilkTouchTable(Block block) {
+        createShearsOrSilkTouchTable(block, block.asItem());
     }
 
     private void createShearsOrSilkTouchOrFixedDropTable(Block block, ItemLike drop) {
