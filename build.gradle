@@ -1,6 +1,7 @@
 plugins {
 	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
 	id 'maven-publish'
+    id 'com.diffplug.spotless' version '7.0.2'
 }
 
 version = project.mod_version
@@ -33,6 +34,8 @@ fabricApi {
 		client = true
 	}
 }
+
+apply from: "$rootDir/gradle/scripts/spotless.gradle"
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
