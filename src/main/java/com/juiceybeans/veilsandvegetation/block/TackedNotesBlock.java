@@ -1,9 +1,8 @@
 package com.juiceybeans.veilsandvegetation.block;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
 import com.juiceybeans.veilsandvegetation.block.blockentity.TackedNotesBlockEntity;
 import com.juiceybeans.veilsandvegetation.menu.TackedNotesMenu;
+
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
@@ -32,12 +31,16 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Maps;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 import java.util.function.Function;
 
 public class TackedNotesBlock extends BaseEntityBlock {
+
     private static final float AABB_OFFSET = 1.0F;
     private static final VoxelShape UP_AABB = Block.box(0.0, 15.0, 0.0, 16.0, 16.0, 16.0);
     private static final VoxelShape DOWN_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 1.0, 16.0);
@@ -46,14 +49,15 @@ public class TackedNotesBlock extends BaseEntityBlock {
     private static final VoxelShape NORTH_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 1.0);
     private static final VoxelShape SOUTH_AABB = Block.box(0.0, 0.0, 15.0, 16.0, 16.0, 16.0);
     private static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = PipeBlock.PROPERTY_BY_DIRECTION;
-    private static final Map<Direction, VoxelShape> SHAPE_BY_DIRECTION = Util.make(Maps.newEnumMap(Direction.class), enumMap -> {
-        enumMap.put(Direction.NORTH, NORTH_AABB);
-        enumMap.put(Direction.EAST, EAST_AABB);
-        enumMap.put(Direction.SOUTH, SOUTH_AABB);
-        enumMap.put(Direction.WEST, WEST_AABB);
-        enumMap.put(Direction.UP, UP_AABB);
-        enumMap.put(Direction.DOWN, DOWN_AABB);
-    });
+    private static final Map<Direction, VoxelShape> SHAPE_BY_DIRECTION = Util.make(Maps.newEnumMap(Direction.class),
+            enumMap -> {
+                enumMap.put(Direction.NORTH, NORTH_AABB);
+                enumMap.put(Direction.EAST, EAST_AABB);
+                enumMap.put(Direction.SOUTH, SOUTH_AABB);
+                enumMap.put(Direction.WEST, WEST_AABB);
+                enumMap.put(Direction.UP, UP_AABB);
+                enumMap.put(Direction.DOWN, DOWN_AABB);
+            });
     protected static final Direction[] DIRECTIONS = Direction.values();
     private final ImmutableMap<BlockState, VoxelShape> shapesCache;
     private final boolean canRotate;
@@ -65,8 +69,10 @@ public class TackedNotesBlock extends BaseEntityBlock {
         this.registerDefaultState(getDefaultMultifaceState(this.stateDefinition));
         this.shapesCache = this.getShapeForEachState(TackedNotesBlock::calculateMultifaceShape);
         this.canRotate = Direction.Plane.HORIZONTAL.stream().allMatch(this::isFaceSupported);
-        this.canMirrorX = Direction.Plane.HORIZONTAL.stream().filter(Direction.Axis.X).filter(this::isFaceSupported).count() % 2L == 0L;
-        this.canMirrorZ = Direction.Plane.HORIZONTAL.stream().filter(Direction.Axis.Z).filter(this::isFaceSupported).count() % 2L == 0L;
+        this.canMirrorX = Direction.Plane.HORIZONTAL.stream().filter(Direction.Axis.X).filter(this::isFaceSupported)
+                .count() % 2L == 0L;
+        this.canMirrorZ = Direction.Plane.HORIZONTAL.stream().filter(Direction.Axis.Z).filter(this::isFaceSupported)
+                .count() % 2L == 0L;
     }
 
     @Override
@@ -78,6 +84,7 @@ public class TackedNotesBlock extends BaseEntityBlock {
                 ServerPlayer serverPlayer = (ServerPlayer) player;
 
                 serverPlayer.openMenu(new ExtendedScreenHandlerFactory() {
+
                     @Override
                     public void writeScreenOpeningData(ServerPlayer player, FriendlyByteBuf buf) {
                         buf.writeBlockPos(pos);
@@ -130,7 +137,7 @@ public class TackedNotesBlock extends BaseEntityBlock {
         Set<Direction> set = EnumSet.noneOf(Direction.class);
 
         for (Direction direction : Direction.values()) {
-            if ((packedDirections & (byte)(1 << direction.ordinal())) > 0) {
+            if ((packedDirections & (byte) (1 << direction.ordinal())) > 0) {
                 set.add(direction);
             }
         }
@@ -142,7 +149,7 @@ public class TackedNotesBlock extends BaseEntityBlock {
         byte b = 0;
 
         for (Direction direction : directions) {
-            b = (byte)(b | 1 << direction.ordinal());
+            b = (byte) (b | 1 << direction.ordinal());
         }
 
         return b;
@@ -162,7 +169,8 @@ public class TackedNotesBlock extends BaseEntityBlock {
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level,
+                                  BlockPos pos, BlockPos neighborPos) {
         return state;
     }
 
@@ -195,7 +203,8 @@ public class TackedNotesBlock extends BaseEntityBlock {
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, BlockPos neighborPos, boolean movedByPiston) {
+    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, BlockPos neighborPos,
+                                boolean movedByPiston) {
         for (Direction direction : DIRECTIONS) {
             if (hasFace(state, direction)) {
                 BlockPos neighbor = pos.relative(direction);
@@ -230,7 +239,8 @@ public class TackedNotesBlock extends BaseEntityBlock {
     }
 
     @Nullable
-    public BlockState getStateForPlacement(BlockState currentState, BlockGetter level, BlockPos pos, Direction lookingDirection) {
+    public BlockState getStateForPlacement(BlockState currentState, BlockGetter level, BlockPos pos,
+                                           Direction lookingDirection) {
         if (!this.isValidStateForPlacement(level, currentState, pos, lookingDirection)) {
             return null;
         }
@@ -266,7 +276,8 @@ public class TackedNotesBlock extends BaseEntityBlock {
 
         for (Direction direction : DIRECTIONS) {
             if (this.isFaceSupported(direction)) {
-                blockState = blockState.setValue(getFaceProperty(directionalFunction.apply(direction)), state.getValue(getFaceProperty(direction)));
+                blockState = blockState.setValue(getFaceProperty(directionalFunction.apply(direction)),
+                        state.getValue(getFaceProperty(direction)));
             }
         }
 
@@ -279,8 +290,8 @@ public class TackedNotesBlock extends BaseEntityBlock {
     }
 
     public static boolean canAttachTo(BlockGetter level, Direction direction, BlockPos pos, BlockState state) {
-        return Block.isFaceFull(state.getBlockSupportShape(level, pos), direction.getOpposite())
-                || Block.isFaceFull(state.getCollisionShape(level, pos), direction.getOpposite());
+        return Block.isFaceFull(state.getBlockSupportShape(level, pos), direction.getOpposite()) ||
+                Block.isFaceFull(state.getCollisionShape(level, pos), direction.getOpposite());
     }
 
     private boolean isWaterloggable() {

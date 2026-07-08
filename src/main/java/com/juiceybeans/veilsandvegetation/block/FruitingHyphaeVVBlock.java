@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class FruitingHyphaeVVBlock extends SpreadableVVBlock {
+
     private Block shearedBlock;
 
     public FruitingHyphaeVVBlock(Properties properties) {
@@ -24,7 +25,8 @@ public class FruitingHyphaeVVBlock extends SpreadableVVBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand,
+                                 BlockHitResult hit) {
         var stack = player.getItemInHand(hand);
         if (stack.is(Items.SHEARS)) {
             if (!level.isClientSide()) {

@@ -3,12 +3,14 @@ package com.juiceybeans.veilsandvegetation.menu;
 import com.juiceybeans.veilsandvegetation.block.blockentity.TackedNotesBlockEntity;
 import com.juiceybeans.veilsandvegetation.init.VVBlocks;
 import com.juiceybeans.veilsandvegetation.init.VVMenus;
+
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.ItemStack;
 
 public class TackedNotesMenu extends AbstractContainerMenu {
+
     private final TackedNotesBlockEntity notesEntity;
     private final ContainerLevelAccess access;
 

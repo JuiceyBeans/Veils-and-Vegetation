@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class BonemealableVVBlock extends WaterloggableVVBlock implements BonemealableBlock {
+
     private final Block bonemealedBlock;
 
     public BonemealableVVBlock(Properties properties, Block bonemealedBlock) {

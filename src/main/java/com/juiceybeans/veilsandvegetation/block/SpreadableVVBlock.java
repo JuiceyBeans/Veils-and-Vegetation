@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.MultifaceSpreader;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class SpreadableVVBlock extends BaseVVBlock implements BonemealableBlock {
+
     private MultifaceSpreader spreader;
     private BaseVVBlock spreadBlock;
 
@@ -27,7 +28,8 @@ public class SpreadableVVBlock extends BaseVVBlock implements BonemealableBlock 
 
     @Override
     public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
-        return Direction.stream().anyMatch(direction -> this.spreader.canSpreadInAnyDirection(state, level, pos, direction.getOpposite()));
+        return Direction.stream().anyMatch(
+                direction -> this.spreader.canSpreadInAnyDirection(state, level, pos, direction.getOpposite()));
     }
 
     @Override

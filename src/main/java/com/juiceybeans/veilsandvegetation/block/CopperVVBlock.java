@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class CopperVVBlock extends WaterloggableVVBlock implements WeatheringCopper {
+
     private final WeatheringCopper.WeatherState weatherState;
 
     public CopperVVBlock(Properties properties, WeatherState weatherState) {

@@ -1,6 +1,7 @@
 package com.juiceybeans.veilsandvegetation.block;
 
 import com.juiceybeans.veilsandvegetation.init.VVBlocks;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -14,12 +15,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class FrutingSweetBerryFoliage extends BaseVVBlock {
+
     public FrutingSweetBerryFoliage(Properties properties) {
         super(properties);
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand,
+                                 BlockHitResult hit) {
         if (!level.isClientSide()) {
             popResource(level, pos, Items.SWEET_BERRIES.getDefaultInstance());
             level.setBlock(pos, VVBlocks.SWEET_BERRY_FOLIAGE.withPropertiesOf(state), Block.UPDATE_ALL);
