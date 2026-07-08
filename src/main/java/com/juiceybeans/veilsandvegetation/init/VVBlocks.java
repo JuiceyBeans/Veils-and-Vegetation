@@ -8,16 +8,17 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
+import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.WeatheringCopper;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,7 +106,8 @@ public class VVBlocks {
     public static final Block COAL_FRAGMENTS = registerBlock("coal_fragments",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(COAL_ORE).mapColor(MapColor.COLOR_BLACK)));
     public static final Block REDSTONE_FRAGMENTS = registerBlock("redstone_fragments",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(REDSTONE_ORE).mapColor(MapColor.COLOR_RED)));
+            new WaterloggableVVBlock(FabricBlockSettings.of().instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops().mapColor(MapColor.COLOR_RED)));
     public static final Block LAPIS_LAZULI_FRAGMENTS = registerBlock("lapis_lazuli_fragments",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(LAPIS_ORE).mapColor(MapColor.LAPIS)));
     public static final Block MOSSY_COBBLESTONE_CHUNKS = registerBlock("mossy_cobblestone_chunks",
@@ -217,11 +219,14 @@ public class VVBlocks {
     public static final Block FLOWERING_AZALEA_FOLIAGE = registerBlock("flowering_azalea_foliage", new BaseVVBlock(
             FabricBlockSettings.copyOf(FLOWERING_AZALEA_LEAVES)));
     public static final Block FRUITING_GLOWBERRY_CREEPS = registerBlock("fruiting_glowberry_creeps",
-            new FruitingGlowberryCreepsBlock(FabricBlockSettings.copyOf(CAVE_VINES_PLANT)));
+            new FruitingGlowberryCreepsBlock(FabricBlockSettings.of().lightLevel(14).mapColor(MapColor.PLANT)
+                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)));
     public static final Block GLOWBERRY_CREEPS = registerBlock("glowberry_creeps",
-            new GlowberryCreepsBlock(FabricBlockSettings.copyOf(CAVE_VINES_PLANT).lightLevel(0)));
+            new GlowberryCreepsBlock(FabricBlockSettings.of().lightLevel(0).mapColor(MapColor.PLANT)
+                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)));
     public static final Block BARE_GLOWBERRY_CREEPS = registerBlock("bare_glowberry_creeps",
-            new BonemealableVVBlock(FabricBlockSettings.copyOf(CAVE_VINES_PLANT).lightLevel(0), GLOWBERRY_CREEPS));
+            new BonemealableVVBlock(FabricBlockSettings.of().lightLevel(0).mapColor(MapColor.PLANT)
+                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY), GLOWBERRY_CREEPS));
     public static final Block FRUITING_SWEET_BERRY_FOLIAGE = registerBlock("fruiting_sweet_berry_foliage",
             new FrutingSweetBerryFoliage(FabricBlockSettings.copyOf(SWEET_BERRY_BUSH)));
     public static final Block SWEET_BERRY_FOLIAGE = registerBlock("sweet_berry_foliage",
@@ -291,7 +296,8 @@ public class VVBlocks {
     public static final Block MANGROVE_CREEPS = registerBlock("mangrove_creeps",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(MANGROVE_WOOD)));
     public static final Block STRIPPED_MANGROVE_CREEPS = registerBlock("stripped_mangrove_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_MANGROVE_WOOD)));
+            new WaterloggableVVBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED)
+                    .instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
     public static final Block CHERRY_CREEPS = registerBlock("cherry_creeps",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(CHERRY_WOOD)));
     public static final Block STRIPPED_CHERRY_CREEPS = registerBlock("stripped_cherry_creeps",
