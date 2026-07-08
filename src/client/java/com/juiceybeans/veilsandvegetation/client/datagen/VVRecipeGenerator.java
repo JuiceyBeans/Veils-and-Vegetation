@@ -637,6 +637,11 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .unlockedBy("has_item", has(MOSS_BLOCK))
                 .save(writer, VeilsAndVegetation.id("moss_clumps"));
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, MOSS_GROWTH, 6)
+                .requires(MOSS_CARPET, 2)
+                .unlockedBy("has_item", has(MOSS_CARPET))
+                .save(writer, VeilsAndVegetation.id("moss_growth"));
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, AQUA_GOO_NODES)
                 .requires(WATER_BUCKET)
                 .requires(SLIME_BALL)

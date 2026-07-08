@@ -31,6 +31,7 @@ public class VVCompostables {
         CompostingChanceRegistry.INSTANCE.add(BAMBOO_FOLIAGE, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(GRASS_SHOOTS, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(MOSS_CLUMPS, 0.3f);
+        CompostingChanceRegistry.INSTANCE.add(MOSS_GROWTH, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(BEACHED_KELP, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(BEACHED_SEA_GRASS, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(NETHER_WART_SPROUTS, 0.65f);

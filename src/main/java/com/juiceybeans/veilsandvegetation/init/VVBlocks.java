@@ -122,6 +122,7 @@ public class VVBlocks {
     public static final Block BAMBOO_FOLIAGE = registerBlock("bamboo_foliage", new BaseVVBlock(FabricBlockSettings.of().burnable()));
     public static final Block GRASS_SHOOTS = registerBlock("grass_shoots", new BaseVVBlock(FabricBlockSettings.of().burnable()));
     public static final Block MOSS_CLUMPS = registerBlock("moss_clumps", new SpreadableVVBlock(FabricBlockSettings.of().burnable()));
+    public static final Block MOSS_GROWTH = registerBlock("moss_growth", new SpreadableVVBlock(FabricBlockSettings.of().burnable()));
     public static final Block AQUA_GOO_NODES = registerBlock("aqua_goo_nodes", new SpreadableVVBlock(FabricBlockSettings.of().lightLevel(4)));
     public static final Block OCHRE_GOO_NODES = registerBlock("ochre_goo_nodes", new SpreadableVVBlock(FabricBlockSettings.of().lightLevel(4)));
     public static final Block PEARLESCENT_GOO_NODES = registerBlock("pearlescent_goo_nodes", new SpreadableVVBlock(FabricBlockSettings.of().lightLevel(4)));
