@@ -2,19 +2,20 @@ package com.juiceybeans.veilsandvegetation.init;
 
 import com.juiceybeans.veilsandvegetation.VeilsAndVegetation;
 import com.juiceybeans.veilsandvegetation.block.*;
-
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
-import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -40,13 +41,13 @@ public class VVBlocks {
     }
 
     public static final Block TACKED_PAPER = registerBlock("tacked_paper", new BaseVVBlock(
-            FabricBlockSettings.of().instabreak().mapColor(DyeColor.WHITE).sound(SoundType.GRASS)));
+            FabricBlockSettings.of().burnable().instabreak().mapColor(DyeColor.WHITE).sound(SoundType.GRASS)));
     public static final Block TACKED_NOTES = registerBlock("tacked_notes", new TackedNotesBlock(
-            FabricBlockSettings.of().instabreak().mapColor(DyeColor.WHITE).sound(SoundType.GRASS)));
+            FabricBlockSettings.of().burnable().instabreak().mapColor(DyeColor.WHITE).sound(SoundType.GRASS)));
     public static final Block SPLAYED_LEATHER = registerBlock("splayed_leather", new BaseVVBlock(
-            FabricBlockSettings.of().instabreak().mapColor(MapColor.COLOR_BROWN).sound(SoundType.GRASS)));
+            FabricBlockSettings.of().burnable().instabreak().mapColor(MapColor.COLOR_BROWN).sound(SoundType.GRASS)));
     public static final Block SPLAYED_HIDE = registerBlock("splayed_hide", new BaseVVBlock(
-            FabricBlockSettings.of().instabreak().mapColor(MapColor.COLOR_BROWN).sound(SoundType.GRASS)));
+            FabricBlockSettings.of().burnable().instabreak().mapColor(MapColor.COLOR_BROWN).sound(SoundType.GRASS)));
     public static final Block STONE_BRICK_CHUNKS = registerBlock("stone_brick_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(STONE_BRICKS)));
     public static final Block MOSSY_STONE_BRICK_CHUNKS = registerBlock("mossy_stone_brick_chunks",
@@ -163,9 +164,9 @@ public class VVBlocks {
     public static final Block CRIMSON_VINES = registerBlock("crimson_vines", new SpreadableVVBlock(FabricBlockSettings
             .copyOf(WEEPING_VINES)));
     public static final Block ROSE_CREEPS = registerBlock("rose_creeps", new RoseCreepsBlock(
-            FabricBlockSettings.copyOf(ROSE_BUSH)));
+            FabricBlockSettings.copyOf(ROSE_BUSH).burnable()));
     public static final Block ROSE_VINES = registerBlock("rose_vines", new BonemealableVVBlock(
-            FabricBlockSettings.copyOf(ROSE_BUSH), ROSE_CREEPS));
+            FabricBlockSettings.copyOf(ROSE_BUSH).burnable(), ROSE_CREEPS));
     public static final Block WARPED_GROWTHS = registerBlock("warped_growths", new SpreadableVVBlock(FabricBlockSettings
             .copyOf(Blocks.NETHER_SPROUTS)));
     public static final Block BUDDING_WARPED_VINES = registerBlock("budding_warped_vines",
@@ -173,21 +174,21 @@ public class VVBlocks {
     public static final Block WARPED_VINES = registerBlock("warped_vines", new BonemealableVVBlock(
             FabricBlockSettings.copyOf(WARPED_ROOTS), BUDDING_WARPED_VINES));
     public static final Block FRUITING_RED_HYPHAE = registerBlock("fruiting_red_hyphae", new FruitingHyphaeVVBlock(
-            FabricBlockSettings.copyOf(RED_MUSHROOM)));
+            FabricBlockSettings.copyOf(RED_MUSHROOM).burnable()));
     public static final Block RED_HYPHAE = registerBlock("red_hyphae", new BonemealableVVBlock(
-            FabricBlockSettings.copyOf(RED_MUSHROOM), FRUITING_RED_HYPHAE));
+            FabricBlockSettings.copyOf(RED_MUSHROOM).burnable(), FRUITING_RED_HYPHAE));
     public static final Block FRUITING_BROWN_HYPHAE = registerBlock("fruiting_brown_hyphae", new FruitingHyphaeVVBlock(
-            FabricBlockSettings.copyOf(BROWN_MUSHROOM)));
+            FabricBlockSettings.copyOf(BROWN_MUSHROOM).burnable()));
     public static final Block BROWN_HYPHAE = registerBlock("brown_hyphae", new BonemealableVVBlock(
-            FabricBlockSettings.copyOf(BROWN_MUSHROOM), FRUITING_BROWN_HYPHAE));
+            FabricBlockSettings.copyOf(BROWN_MUSHROOM).burnable(), FRUITING_BROWN_HYPHAE));
     public static final Block DEAD_CREEPS = registerBlock("dead_creeps", new SpreadableVVBlock(
-            FabricBlockSettings.copyOf(DEAD_BUSH)));
+            FabricBlockSettings.copyOf(DEAD_BUSH).burnable()));
     public static final Block ARCHAIC_CREEPS = registerBlock("archaic_creeps", new SpreadableVVBlock(
-            FabricBlockSettings.copyOf(Blocks.SOUL_SAND).instabreak().sound(SoundType.GRASS)));
+            FabricBlockSettings.copyOf(Blocks.SOUL_SAND).burnable().sound(SoundType.GRASS)));
     public static final Block ROOT_CREEPS = registerBlock("root_creeps", new SpreadableVVBlock(
-            FabricBlockSettings.copyOf(HANGING_ROOTS)));
+            FabricBlockSettings.copyOf(HANGING_ROOTS).burnable()));
     public static final Block MYCELIUM_HYPHAE = registerBlock("mycelium_hyphae",
-            new SpreadableVVBlock(FabricBlockSettings.copyOf(MYCELIUM)));
+            new SpreadableVVBlock(FabricBlockSettings.copyOf(MYCELIUM).burnable()));
     public static final Block BUDDING_CRIMSON_HYPHAE = registerBlock("budding_crimson_hyphae",
             new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE),
                     Items.CRIMSON_FUNGUS.getDefaultInstance()));
@@ -235,11 +236,11 @@ public class VVBlocks {
     public static final Block BAMBOO_FOLIAGE = registerBlock("bamboo_foliage", new BaseVVBlock(FabricBlockSettings
             .copyOf(BAMBOO)));
     public static final Block GRASS_SHOOTS = registerBlock("grass_shoots", new BaseVVBlock(FabricBlockSettings
-            .copyOf(GRASS_BLOCK)));
+            .copyOf(GRASS_BLOCK).burnable()));
     public static final Block MOSS_CLUMPS = registerBlock("moss_clumps", new SpreadableVVBlock(FabricBlockSettings
-            .copyOf(MOSS_BLOCK)));
+            .copyOf(MOSS_BLOCK).burnable()));
     public static final Block MOSS_GROWTH = registerBlock("moss_growth", new SpreadableVVBlock(FabricBlockSettings
-            .copyOf(MOSS_BLOCK)));
+            .copyOf(MOSS_BLOCK).burnable()));
     public static final Block AQUA_GOO_NODES = registerBlock("aqua_goo_nodes",
             new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
                     .mapColor(MapColor.COLOR_CYAN).lightLevel(4).sound(SoundType.SLIME_BLOCK)));
@@ -265,9 +266,9 @@ public class VVBlocks {
             new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
                     .mapColor(MapColor.GLOW_LICHEN).lightLevel(8).sound(SoundType.SLIME_BLOCK)));
     public static final Block BEACHED_KELP = registerBlock("beached_kelp", new BaseVVBlock(FabricBlockSettings.of()
-            .hardness(0.2f).resistance(0.2f).requiresTool().mapColor(MapColor.COLOR_GREEN).sound(SoundType.GRASS)));
+            .burnable().strength(0.2f, 0.2f).requiresTool().mapColor(MapColor.COLOR_GREEN).sound(SoundType.WET_GRASS)));
     public static final Block BEACHED_SEA_GRASS = registerBlock("beached_sea_grass",
-            new BaseVVBlock(FabricBlockSettings.of().hardness(0.2f).resistance(0.2f).requiresTool()
+            new BaseVVBlock(FabricBlockSettings.of().burnable().strength(0.2f, 0.2f).requiresTool()
                     .mapColor(MapColor.COLOR_GREEN).sound(SoundType.WET_GRASS)));
     public static final Block OAK_CREEPS = registerBlock("oak_creeps",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(OAK_WOOD)));
