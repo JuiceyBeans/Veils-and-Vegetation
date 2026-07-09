@@ -105,7 +105,7 @@ public class VVBlocks {
     public static final Block DIAMOND_FRAGMENTS = registerBlock("diamond_fragments",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(DIAMOND_ORE).mapColor(MapColor.DIAMOND)));
     public static final Block COAL_FRAGMENTS = registerBlock("coal_fragments",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(COAL_ORE).mapColor(MapColor.COLOR_BLACK)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(COAL_ORE).burnable().mapColor(MapColor.COLOR_BLACK)));
     public static final Block REDSTONE_FRAGMENTS = registerBlock("redstone_fragments",
             new WaterloggableVVBlock(FabricBlockSettings.of().instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresCorrectToolForDrops().mapColor(MapColor.COLOR_RED)));
