@@ -2,6 +2,7 @@ package com.juiceybeans.veilsandvegetation.init;
 
 import com.juiceybeans.veilsandvegetation.VeilsAndVegetation;
 import com.juiceybeans.veilsandvegetation.block.*;
+
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
@@ -227,7 +228,8 @@ public class VVBlocks {
                     .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)));
     public static final Block BARE_GLOWBERRY_CREEPS = registerBlock("bare_glowberry_creeps",
             new BonemealableVVBlock(FabricBlockSettings.of().lightLevel(0).mapColor(MapColor.PLANT)
-                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY), GLOWBERRY_CREEPS));
+                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY),
+                    GLOWBERRY_CREEPS));
     public static final Block FRUITING_SWEET_BERRY_FOLIAGE = registerBlock("fruiting_sweet_berry_foliage",
             new FrutingSweetBerryFoliage(FabricBlockSettings.copyOf(SWEET_BERRY_BUSH)));
     public static final Block SWEET_BERRY_FOLIAGE = registerBlock("sweet_berry_foliage",
