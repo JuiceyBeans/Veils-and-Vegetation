@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "veilsandvegetation:block/mangrove_foliage"
+    "layer0": "minecraft:block/mangrove_leaves"
   }
 }

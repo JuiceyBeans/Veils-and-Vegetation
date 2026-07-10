@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "veilsandvegetation:block/flowering_azalea_foliage"
+    "layer0": "minecraft:block/flowering_azalea_leaves"
   }
 }

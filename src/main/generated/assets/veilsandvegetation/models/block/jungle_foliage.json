@@ -1,6 +1,6 @@
 {
   "parent": "veilsandvegetation:block/vv_multiface",
   "textures": {
-    "texture": "veilsandvegetation:block/jungle_foliage"
+    "texture": "minecraft:block/jungle_leaves"
   }
 }

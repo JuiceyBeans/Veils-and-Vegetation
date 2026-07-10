@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "veilsandvegetation:block/oak_foliage"
+    "layer0": "minecraft:block/oak_leaves"
   }
 }

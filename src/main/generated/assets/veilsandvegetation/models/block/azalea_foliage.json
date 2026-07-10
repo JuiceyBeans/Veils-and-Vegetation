@@ -1,6 +1,6 @@
 {
   "parent": "veilsandvegetation:block/vv_multiface",
   "textures": {
-    "texture": "veilsandvegetation:block/azalea_foliage"
+    "texture": "minecraft:block/azalea_leaves"
   }
 }

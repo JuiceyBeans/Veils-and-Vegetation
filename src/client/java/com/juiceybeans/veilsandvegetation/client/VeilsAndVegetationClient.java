@@ -42,8 +42,7 @@ public class VeilsAndVegetationClient implements ClientModInitializer {
                 VVBlocks.OAK_FOLIAGE,
                 VVBlocks.JUNGLE_FOLIAGE,
                 VVBlocks.ACACIA_FOLIAGE,
-                VVBlocks.DARK_OAK_FOLIAGE,
-                VVBlocks.MANGROVE_FOLIAGE
+                VVBlocks.DARK_OAK_FOLIAGE
         );
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
@@ -54,6 +53,54 @@ public class VeilsAndVegetationClient implements ClientModInitializer {
             return GrassColor.getDefaultColor();
             },
                 VVBlocks.GRASS_SHOOTS
+        );
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                    if (world != null && pos != null) {
+                        return BiomeColors.getAverageFoliageColor(world, pos);
+                    }
+                    return FoliageColor.getBirchColor();
+                },
+                VVBlocks.BIRCH_FOLIAGE
+        );
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                    if (world != null && pos != null) {
+                        return BiomeColors.getAverageFoliageColor(world, pos);
+                    }
+
+                    return FoliageColor.getMangroveColor();
+                },
+                VVBlocks.MANGROVE_FOLIAGE
+        );
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                    if (world != null && pos != null) {
+                        return BiomeColors.getAverageFoliageColor(world, pos);
+                    }
+
+                    return FoliageColor.getEvergreenColor();
+                },
+                VVBlocks.SPRUCE_FOLIAGE
+        );
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColor.getDefaultColor(),
+                VVBlocks.OAK_FOLIAGE.asItem(),
+                VVBlocks.JUNGLE_FOLIAGE.asItem(),
+                VVBlocks.ACACIA_FOLIAGE.asItem(),
+                VVBlocks.DARK_OAK_FOLIAGE.asItem()
+        );
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> GrassColor.getDefaultColor(),
+                VVBlocks.GRASS_SHOOTS.asItem()
+        );
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColor.getBirchColor(),
+                VVBlocks.BIRCH_FOLIAGE.asItem()
+        );
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColor.getMangroveColor(),
+                VVBlocks.MANGROVE_FOLIAGE.asItem()
+        );
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColor.getEvergreenColor(),
+                VVBlocks.SPRUCE_FOLIAGE.asItem()
         );
 	}
 }

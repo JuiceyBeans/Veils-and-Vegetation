@@ -1,6 +1,6 @@
 {
   "parent": "veilsandvegetation:block/vv_multiface",
   "textures": {
-    "texture": "veilsandvegetation:block/dark_oak_foliage"
+    "texture": "minecraft:block/dark_oak_leaves"
   }
 }

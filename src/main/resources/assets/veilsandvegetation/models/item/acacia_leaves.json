@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecraft:block/cherry_leaves"
+    "texture": "minecraft:block/acacia_leaves"
   }
 }
