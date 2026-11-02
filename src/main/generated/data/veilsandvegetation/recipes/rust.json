@@ -6,7 +6,14 @@
       "item": "minecraft:raw_iron"
     },
     {
-      "item": "minecraft:water_bucket"
+      "fabric:type": "fabric:nbt",
+      "base": {
+        "item": "minecraft:potion"
+      },
+      "nbt": {
+        "Potion": "minecraft:water"
+      },
+      "strict": true
     }
   ],
   "result": {

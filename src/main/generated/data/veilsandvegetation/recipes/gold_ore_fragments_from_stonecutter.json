@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 8,
   "ingredient": {
-    "item": "minecraft:gold_ore"
+    "item": "minecraft:raw_gold"
   },
   "result": "veilsandvegetation:gold_ore_fragments"
 }

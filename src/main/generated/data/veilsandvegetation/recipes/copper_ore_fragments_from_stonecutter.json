@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 8,
   "ingredient": {
-    "item": "minecraft:copper_ore"
+    "item": "minecraft:raw_copper"
   },
   "result": "veilsandvegetation:copper_ore_fragments"
 }

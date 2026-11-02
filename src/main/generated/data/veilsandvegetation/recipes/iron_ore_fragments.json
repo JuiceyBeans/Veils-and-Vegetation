@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:iron_ore"
+      "item": "minecraft:raw_iron"
     },
     {
-      "item": "minecraft:iron_ore"
+      "item": "minecraft:raw_iron"
     }
   ],
   "result": {

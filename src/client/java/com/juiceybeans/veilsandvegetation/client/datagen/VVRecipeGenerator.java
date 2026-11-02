@@ -3,11 +3,17 @@ package com.juiceybeans.veilsandvegetation.client.datagen;
 import com.juiceybeans.veilsandvegetation.VeilsAndVegetation;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.fabricmc.fabric.api.recipe.v1.ingredient.DefaultCustomIngredients;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Consumer;
@@ -250,30 +256,30 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .save(writer, VeilsAndVegetation.id("netherite_plating_from_stonecutter"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, COPPER_ORE_FRAGMENTS, 16)
-                .requires(COPPER_ORE, 2)
-                .unlockedBy("has_item", has(COPPER_ORE))
+                .requires(RAW_COPPER, 2)
+                .unlockedBy("has_item", has(RAW_COPPER))
                 .save(writer, VeilsAndVegetation.id("copper_ore_fragments"));
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(COPPER_ORE), RecipeCategory.MISC, COPPER_ORE_FRAGMENTS, 8)
-                .unlockedBy("has_item", has(COPPER_ORE))
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RAW_COPPER), RecipeCategory.MISC, COPPER_ORE_FRAGMENTS, 8)
+                .unlockedBy("has_item", has(RAW_COPPER))
                 .save(writer, VeilsAndVegetation.id("copper_ore_fragments_from_stonecutter"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, IRON_ORE_FRAGMENTS, 16)
-                .requires(IRON_ORE, 2)
-                .unlockedBy("has_item", has(IRON_ORE))
+                .requires(RAW_IRON, 2)
+                .unlockedBy("has_item", has(RAW_IRON))
                 .save(writer, VeilsAndVegetation.id("iron_ore_fragments"));
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(IRON_ORE), RecipeCategory.MISC, IRON_ORE_FRAGMENTS, 8)
-                .unlockedBy("has_item", has(IRON_ORE))
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RAW_IRON), RecipeCategory.MISC, IRON_ORE_FRAGMENTS, 8)
+                .unlockedBy("has_item", has(RAW_IRON))
                 .save(writer, VeilsAndVegetation.id("iron_ore_fragments_from_stonecutter"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, GOLD_ORE_FRAGMENTS, 16)
-                .requires(GOLD_ORE, 2)
-                .unlockedBy("has_item", has(GOLD_ORE))
+                .requires(RAW_GOLD, 2)
+                .unlockedBy("has_item", has(RAW_GOLD))
                 .save(writer, VeilsAndVegetation.id("gold_ore_fragments"));
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(GOLD_ORE), RecipeCategory.MISC, GOLD_ORE_FRAGMENTS, 8)
-                .unlockedBy("has_item", has(GOLD_ORE))
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RAW_GOLD), RecipeCategory.MISC, GOLD_ORE_FRAGMENTS, 8)
+                .unlockedBy("has_item", has(RAW_GOLD))
                 .save(writer, VeilsAndVegetation.id("gold_ore_fragments_from_stonecutter"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NETHER_QUARTZ_FRAGMENTS, 8)
@@ -633,16 +639,16 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .save(writer, VeilsAndVegetation.id("grass_shoots"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, MOSS_CLUMPS, 4)
-                .requires(MOSS_BLOCK, 2)
+                .requires(MOSS_BLOCK, 3)
                 .unlockedBy("has_item", has(MOSS_BLOCK))
                 .save(writer, VeilsAndVegetation.id("moss_clumps"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, MOSS_GROWTH, 6)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, MOSS_GROWTH, 9)
                 .requires(MOSS_CARPET, 2)
                 .unlockedBy("has_item", has(MOSS_CARPET))
                 .save(writer, VeilsAndVegetation.id("moss_growth"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, AQUA_GOO_NODES)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, AQUA_GOO_NODES, 4)
                 .requires(WATER_BUCKET)
                 .requires(SLIME_BALL)
                 .requires(BONE_MEAL)
@@ -664,25 +670,25 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .unlockedBy("has_item", has(VERDANT_FROGLIGHT))
                 .save(writer, VeilsAndVegetation.id("verdant_goo_nodes"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, AQUA_GOO_HYPHAE, 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, AQUA_GOO_HYPHAE, 6)
                 .requires(AQUA_GOO_NODES)
                 .requires(BONE_MEAL)
                 .unlockedBy("has_item", has(WATER_BUCKET))
                 .save(writer, VeilsAndVegetation.id("aqua_goo_hyphae"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, OCHRE_GOO_HYPHAE, 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, OCHRE_GOO_HYPHAE, 6)
                 .requires(OCHRE_FROGLIGHT)
                 .requires(BONE_MEAL)
                 .unlockedBy("has_item", has(OCHRE_FROGLIGHT))
                 .save(writer, VeilsAndVegetation.id("ochre_goo_hyphae"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, PEARLESCENT_GOO_HYPHAE, 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, PEARLESCENT_GOO_HYPHAE, 6)
                 .requires(PEARLESCENT_FROGLIGHT)
                 .requires(BONE_MEAL)
                 .unlockedBy("has_item", has(PEARLESCENT_FROGLIGHT))
                 .save(writer, VeilsAndVegetation.id("pearlescent_goo_hyphae"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, VERDANT_GOO_HYPHAE, 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, VERDANT_GOO_HYPHAE, 6)
                 .requires(VERDANT_FROGLIGHT)
                 .requires(BONE_MEAL)
                 .unlockedBy("has_item", has(VERDANT_FROGLIGHT))
@@ -798,16 +804,9 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .unlockedBy("has_item", has(Items.STRIPPED_CRIMSON_HYPHAE))
                 .save(writer, VeilsAndVegetation.id("stripped_crimson_creeps"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, GRIME, 9)
-                .requires(ROTTEN_FLESH)
-                .requires(DIRT)
-                .requires(Ingredient.of(COBWEB, STRING))
-                .unlockedBy("has_item", has(ROTTEN_FLESH))
-                .save(writer, VeilsAndVegetation.id("grime"));
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RUST, 9)
                 .requires(RAW_IRON)
-                .requires(WATER_BUCKET)
+                .requires(DefaultCustomIngredients.nbt(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER), true))
                 .unlockedBy("has_item", has(RAW_IRON))
                 .save(writer, VeilsAndVegetation.id("rust"));
 
@@ -816,13 +815,6 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .requires(WATER_BUCKET)
                 .unlockedBy("has_item", has(RAW_IRON_BLOCK))
                 .save(writer, VeilsAndVegetation.id("rust_block"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, DUST, 9)
-                .requires(GUNPOWDER)
-                .requires(SAND)
-                .requires(Ingredient.of(COBWEB, STRING))
-                .unlockedBy("has_item", has(GUNPOWDER))
-                .save(writer, VeilsAndVegetation.id("dust"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, SHODDY_OAK_PLANKS, 9)
                 .requires(OAK_PLANKS, 3)
