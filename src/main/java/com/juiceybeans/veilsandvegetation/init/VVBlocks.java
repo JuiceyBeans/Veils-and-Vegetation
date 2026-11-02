@@ -191,35 +191,37 @@ public class VVBlocks {
     public static final Block MYCELIUM_HYPHAE = registerBlock("mycelium_hyphae",
             new SpreadableVVBlock(FabricBlockSettings.copyOf(MYCELIUM).burnable()));
     public static final Block BUDDING_CRIMSON_HYPHAE_SHOOTS = registerBlock("budding_crimson_hyphae_shoots",
-            new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE),
+            new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).instabreak(),
                     Items.CRIMSON_FUNGUS.getDefaultInstance()));
     public static final Block CRIMSON_HYPHAE_SHOOTS = registerBlock("crimson_hyphae_shoots",
-            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE), BUDDING_CRIMSON_HYPHAE_SHOOTS));
+            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).instabreak(),
+                    BUDDING_CRIMSON_HYPHAE_SHOOTS));
     public static final Block BUDDING_WARPED_HYPHAE_SHOOTS = registerBlock("budding_warped_hyphae_shoots",
-            new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE),
+            new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE).instabreak(),
                     Items.WARPED_FUNGUS.getDefaultInstance()));
     public static final Block WARPED_HYPHAE_SHOOTS = registerBlock("warped_hyphae_shoots",
-            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE), BUDDING_WARPED_HYPHAE_SHOOTS));
+            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE).instabreak(),
+                    BUDDING_WARPED_HYPHAE_SHOOTS));
     public static final Block OAK_FOLIAGE = registerBlock("oak_foliage",
-            new BaseVVBlock(FabricBlockSettings.copyOf(OAK_LEAVES)));
+            new BaseVVBlock(FabricBlockSettings.copyOf(OAK_LEAVES).instabreak()));
     public static final Block SPRUCE_FOLIAGE = registerBlock("spruce_foliage",
-            new BaseVVBlock(FabricBlockSettings.copyOf(SPRUCE_LEAVES)));
+            new BaseVVBlock(FabricBlockSettings.copyOf(SPRUCE_LEAVES).instabreak()));
     public static final Block BIRCH_FOLIAGE = registerBlock("birch_foliage",
-            new BaseVVBlock(FabricBlockSettings.copyOf(BIRCH_LEAVES)));
+            new BaseVVBlock(FabricBlockSettings.copyOf(BIRCH_LEAVES).instabreak()));
     public static final Block JUNGLE_FOLIAGE = registerBlock("jungle_foliage",
-            new BaseVVBlock(FabricBlockSettings.copyOf(JUNGLE_LEAVES)));
+            new BaseVVBlock(FabricBlockSettings.copyOf(JUNGLE_LEAVES).instabreak()));
     public static final Block ACACIA_FOLIAGE = registerBlock("acacia_foliage",
-            new BaseVVBlock(FabricBlockSettings.copyOf(ACACIA_LEAVES)));
+            new BaseVVBlock(FabricBlockSettings.copyOf(ACACIA_LEAVES).instabreak()));
     public static final Block DARK_OAK_FOLIAGE = registerBlock("dark_oak_foliage",
-            new BaseVVBlock(FabricBlockSettings.copyOf(DARK_OAK_LEAVES)));
+            new BaseVVBlock(FabricBlockSettings.copyOf(DARK_OAK_LEAVES).instabreak()));
     public static final Block MANGROVE_FOLIAGE = registerBlock("mangrove_foliage",
-            new BaseVVBlock(FabricBlockSettings.copyOf(MANGROVE_LEAVES)));
+            new BaseVVBlock(FabricBlockSettings.copyOf(MANGROVE_LEAVES).instabreak()));
     public static final Block CHERRY_FOLIAGE = registerBlock("cherry_foliage",
-            new BaseVVBlock(FabricBlockSettings.copyOf(CHERRY_LEAVES)));
+            new BaseVVBlock(FabricBlockSettings.copyOf(CHERRY_LEAVES).instabreak()));
     public static final Block AZALEA_FOLIAGE = registerBlock("azalea_foliage",
-            new BaseVVBlock(FabricBlockSettings.copyOf(AZALEA_LEAVES)));
+            new BaseVVBlock(FabricBlockSettings.copyOf(AZALEA_LEAVES).instabreak()));
     public static final Block FLOWERING_AZALEA_FOLIAGE = registerBlock("flowering_azalea_foliage", new BaseVVBlock(
-            FabricBlockSettings.copyOf(FLOWERING_AZALEA_LEAVES)));
+            FabricBlockSettings.copyOf(FLOWERING_AZALEA_LEAVES).instabreak()));
     public static final Block FRUITING_GLOWBERRY_CREEPS = registerBlock("fruiting_glowberry_creeps",
             new FruitingGlowberryCreepsBlock(FabricBlockSettings.of().lightLevel(14).mapColor(MapColor.PLANT)
                     .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)));
@@ -236,9 +238,9 @@ public class VVBlocks {
             new BonemealableVVBlock(FabricBlockSettings.copyOf(SWEET_BERRY_BUSH).mapColor(MapColor.PLANT),
                     FRUITING_SWEET_BERRY_FOLIAGE));
     public static final Block BAMBOO_FOLIAGE = registerBlock("bamboo_foliage", new BaseVVBlock(FabricBlockSettings
-            .copyOf(BAMBOO)));
+            .copyOf(BAMBOO).instabreak()));
     public static final Block GRASS_SHOOTS = registerBlock("grass_shoots", new BaseVVBlock(FabricBlockSettings
-            .copyOf(GRASS_BLOCK).burnable()));
+            .copyOf(GRASS_BLOCK).burnable().instabreak()));
     public static final Block MOSS_CLUMPS = registerBlock("moss_clumps", new SpreadableVVBlock(FabricBlockSettings
             .copyOf(MOSS_BLOCK).burnable()));
     public static final Block MOSS_GROWTH = registerBlock("moss_growth", new SpreadableVVBlock(FabricBlockSettings
