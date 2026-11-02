@@ -52,7 +52,8 @@ public class VeilsAndVegetationClient implements ClientModInitializer {
 
             return GrassColor.getDefaultColor();
             },
-                VVBlocks.GRASS_SHOOTS
+                VVBlocks.GRASS_SHOOTS,
+                VVBlocks.GRASS_SMATTERING
         );
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
