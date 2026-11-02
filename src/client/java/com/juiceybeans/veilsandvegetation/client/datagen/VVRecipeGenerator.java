@@ -693,10 +693,10 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .unlockedBy("has_item", has(KELP))
                 .save(writer, VeilsAndVegetation.id("beached_kelp"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, BEACHED_SEA_GRASS, 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, BEACHED_SEAGRASS, 4)
                 .requires(SEAGRASS, 3)
                 .unlockedBy("has_item", has(SEAGRASS))
-                .save(writer, VeilsAndVegetation.id("beached_sea_grass"));
+                .save(writer, VeilsAndVegetation.id("beached_seagrass"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, OAK_CREEPS, 6)
                 .requires(OAK_WOOD, 2)

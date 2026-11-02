@@ -5,7 +5,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:beached_sea_grass",
+          "block": "veilsandvegetation:beached_seagrass",
           "condition": "minecraft:block_state_property",
           "properties": {
             "down": "true"
@@ -19,7 +19,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:beached_sea_grass",
+          "block": "veilsandvegetation:beached_seagrass",
           "condition": "minecraft:block_state_property",
           "properties": {
             "up": "true"
@@ -33,7 +33,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:beached_sea_grass",
+          "block": "veilsandvegetation:beached_seagrass",
           "condition": "minecraft:block_state_property",
           "properties": {
             "north": "true"
@@ -47,7 +47,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:beached_sea_grass",
+          "block": "veilsandvegetation:beached_seagrass",
           "condition": "minecraft:block_state_property",
           "properties": {
             "south": "true"
@@ -61,7 +61,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:beached_sea_grass",
+          "block": "veilsandvegetation:beached_seagrass",
           "condition": "minecraft:block_state_property",
           "properties": {
             "west": "true"
@@ -75,7 +75,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:beached_sea_grass",
+          "block": "veilsandvegetation:beached_seagrass",
           "condition": "minecraft:block_state_property",
           "properties": {
             "east": "true"
@@ -120,7 +120,7 @@
               ]
             }
           ],
-          "name": "veilsandvegetation:beached_sea_grass"
+          "name": "veilsandvegetation:beached_seagrass"
         }
       ],
       "functions": [

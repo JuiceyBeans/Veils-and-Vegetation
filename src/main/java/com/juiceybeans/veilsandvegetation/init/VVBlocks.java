@@ -269,7 +269,7 @@ public class VVBlocks {
                     .mapColor(MapColor.GLOW_LICHEN).lightLevel(8).sound(SoundType.SLIME_BLOCK)));
     public static final Block BEACHED_KELP = registerBlock("beached_kelp", new BaseVVBlock(FabricBlockSettings.of()
             .burnable().strength(0.2f, 0.2f).requiresTool().mapColor(MapColor.COLOR_GREEN).sound(SoundType.WET_GRASS)));
-    public static final Block BEACHED_SEA_GRASS = registerBlock("beached_sea_grass",
+    public static final Block BEACHED_SEAGRASS = registerBlock("beached_seagrass",
             new BaseVVBlock(FabricBlockSettings.of().burnable().strength(0.2f, 0.2f).requiresTool()
                     .mapColor(MapColor.COLOR_GREEN).sound(SoundType.WET_GRASS)));
     public static final Block OAK_CREEPS = registerBlock("oak_creeps",
@@ -388,7 +388,7 @@ public class VVBlocks {
         CompostingChanceRegistry.INSTANCE.add(MOSS_CLUMPS, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(MOSS_GROWTH, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(BEACHED_KELP, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(BEACHED_SEA_GRASS, 0.3f);
+        CompostingChanceRegistry.INSTANCE.add(BEACHED_SEAGRASS, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(NETHER_WART_SPROUTS, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(CRIMSON_VINES, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(ROSE_CREEPS, 0.65f);

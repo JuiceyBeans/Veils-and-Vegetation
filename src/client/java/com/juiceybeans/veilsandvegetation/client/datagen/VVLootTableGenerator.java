@@ -157,7 +157,7 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         createShearsOrSilkTouchTable(VERDANT_GOO_HYPHAE);
 
         createShearsOrSilkTouchTable(BEACHED_KELP);
-        createShearsOrSilkTouchTable(BEACHED_SEA_GRASS);
+        createShearsOrSilkTouchTable(BEACHED_SEAGRASS);
     }
 
     private void dropOtherMultiface(Block block, ItemLike item, float count) {

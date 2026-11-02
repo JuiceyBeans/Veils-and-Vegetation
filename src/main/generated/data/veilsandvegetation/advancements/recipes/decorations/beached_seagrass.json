@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "veilsandvegetation:beached_sea_grass"
+        "recipe": "veilsandvegetation:beached_seagrass"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "veilsandvegetation:beached_sea_grass"
+      "veilsandvegetation:beached_seagrass"
     ]
   },
   "sends_telemetry_event": false

@@ -137,6 +137,6 @@ public class VVBlockTagsGenerator extends FabricTagProvider<Block> {
                 .add(PEARLESCENT_GOO_HYPHAE)
                 .add(VERDANT_GOO_HYPHAE)
                 .add(BEACHED_KELP)
-                .add(BEACHED_SEA_GRASS);
+                .add(BEACHED_SEAGRASS);
     }
 }
