@@ -105,14 +105,14 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .unlockedBy("has_item", has(POLISHED_BLACKSTONE_BRICKS))
                 .save(writer, VeilsAndVegetation.id("blackstone_brick_chunks_from_stonecutter"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, NETHERWART_BRICK_CHUNKS, 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, RED_NETHER_BRICK_CHUNKS, 4)
                 .requires(RED_NETHER_BRICKS, 2)
                 .unlockedBy("has_item", has(RED_NETHER_BRICKS))
-                .save(writer, VeilsAndVegetation.id("netherwart_brick_chunks"));
+                .save(writer, VeilsAndVegetation.id("red_nether_brick_chunks"));
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RED_NETHER_BRICKS), RecipeCategory.BUILDING_BLOCKS, NETHERWART_BRICK_CHUNKS, 2)
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RED_NETHER_BRICKS), RecipeCategory.BUILDING_BLOCKS, RED_NETHER_BRICK_CHUNKS, 2)
                 .unlockedBy("has_item", has(RED_NETHER_BRICKS))
-                .save(writer, VeilsAndVegetation.id("netherwart_brick_chunks_from_stonecutter"));
+                .save(writer, VeilsAndVegetation.id("red_nether_brick_chunks_from_stonecutter"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, NETHER_BRICK_CHUNKS, 4)
                 .requires(NETHER_BRICKS, 2)
