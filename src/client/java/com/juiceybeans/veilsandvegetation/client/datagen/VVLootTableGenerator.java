@@ -34,7 +34,7 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
                 PRISMARINE_CHUNKS,
                 SANDSTONE_CHUNKS,
                 RED_SANDSTONE_CHUNKS,
-                ENDSTONE_CHUNKS,
+                END_STONE_CHUNKS,
                 DIORITE_CHUNKS,
                 GRANITE_CHUNKS,
                 ANDESITE_CHUNKS,

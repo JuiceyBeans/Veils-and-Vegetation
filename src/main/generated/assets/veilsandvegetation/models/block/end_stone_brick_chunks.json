@@ -1,6 +1,6 @@
 {
   "parent": "veilsandvegetation:block/vv_multiface",
   "textures": {
-    "texture": "veilsandvegetation:block/endstone_chunks"
+    "texture": "veilsandvegetation:block/end_stone_brick_chunks"
   }
 }

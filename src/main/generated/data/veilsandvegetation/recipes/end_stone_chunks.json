@@ -3,14 +3,14 @@
   "category": "building",
   "ingredients": [
     {
-      "item": "minecraft:end_stone_bricks"
+      "item": "minecraft:end_stone"
     },
     {
-      "item": "minecraft:end_stone_bricks"
+      "item": "minecraft:end_stone"
     }
   ],
   "result": {
     "count": 4,
-    "item": "veilsandvegetation:endstone_brick_chunks"
+    "item": "veilsandvegetation:end_stone_chunks"
   }
 }

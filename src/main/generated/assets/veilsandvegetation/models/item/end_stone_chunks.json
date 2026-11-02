@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "veilsandvegetation:block/endstone_chunks"
+    "layer0": "veilsandvegetation:block/end_stone_chunks"
   }
 }

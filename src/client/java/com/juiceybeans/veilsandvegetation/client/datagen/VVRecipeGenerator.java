@@ -132,14 +132,14 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .unlockedBy("has_item", has(QUARTZ_BRICKS))
                 .save(writer, VeilsAndVegetation.id("quartz_brick_chunks_from_stonecutter"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ENDSTONE_BRICK_CHUNKS, 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, END_STONE_BRICK_CHUNKS, 4)
                 .requires(END_STONE_BRICKS, 2)
                 .unlockedBy("has_item", has(END_STONE_BRICKS))
-                .save(writer, VeilsAndVegetation.id("endstone_brick_chunks"));
+                .save(writer, VeilsAndVegetation.id("end_stone_brick_chunks"));
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(END_STONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ENDSTONE_BRICK_CHUNKS, 2)
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(END_STONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, END_STONE_BRICK_CHUNKS, 2)
                 .unlockedBy("has_item", has(END_STONE_BRICKS))
-                .save(writer, VeilsAndVegetation.id("endstone_brick_chunks_from_stonecutter"));
+                .save(writer, VeilsAndVegetation.id("end_stone_brick_chunks_from_stonecutter"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, PURPUR_CHUNKS, 4)
                 .requires(PURPUR_BLOCK, 2)
@@ -375,14 +375,14 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .unlockedBy("has_item", has(RED_SANDSTONE))
                 .save(writer, VeilsAndVegetation.id("red_sandstone_chunks_from_stonecutter"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ENDSTONE_CHUNKS, 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, END_STONE_CHUNKS, 4)
                 .requires(END_STONE, 2)
                 .unlockedBy("has_item", has(END_STONE))
-                .save(writer, VeilsAndVegetation.id("endstone_chunks"));
+                .save(writer, VeilsAndVegetation.id("end_stone_chunks"));
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(END_STONE), RecipeCategory.BUILDING_BLOCKS, ENDSTONE_CHUNKS, 2)
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(END_STONE), RecipeCategory.BUILDING_BLOCKS, END_STONE_CHUNKS, 2)
                 .unlockedBy("has_item", has(END_STONE))
-                .save(writer, VeilsAndVegetation.id("endstone_chunks_from_stonecutter"));
+                .save(writer, VeilsAndVegetation.id("end_stone_chunks_from_stonecutter"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, DIORITE_CHUNKS, 4)
                 .requires(DIORITE, 2)

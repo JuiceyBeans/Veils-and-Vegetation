@@ -67,7 +67,7 @@ public class VVBlocks {
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(NETHER_BRICKS)));
     public static final Block QUARTZ_BRICK_CHUNKS = registerBlock("quartz_brick_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(QUARTZ_BRICKS)));
-    public static final Block ENDSTONE_BRICK_CHUNKS = registerBlock("endstone_brick_chunks",
+    public static final Block END_STONE_BRICK_CHUNKS = registerBlock("end_stone_brick_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(END_STONE_BRICKS)));
     public static final Block PURPUR_CHUNKS = registerBlock("purpur_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(PURPUR_BLOCK)));
@@ -122,7 +122,7 @@ public class VVBlocks {
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(SANDSTONE)));
     public static final Block RED_SANDSTONE_CHUNKS = registerBlock("red_sandstone_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(RED_SANDSTONE)));
-    public static final Block ENDSTONE_CHUNKS = registerBlock("endstone_chunks",
+    public static final Block END_STONE_CHUNKS = registerBlock("end_stone_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(END_STONE)));
     public static final Block DIORITE_CHUNKS = registerBlock("diorite_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(DIORITE)));
