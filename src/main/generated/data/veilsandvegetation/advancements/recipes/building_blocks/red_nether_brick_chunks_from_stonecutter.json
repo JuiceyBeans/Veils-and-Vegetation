@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "veilsandvegetation:netherwart_brick_chunks"
+        "recipe": "veilsandvegetation:red_nether_brick_chunks_from_stonecutter"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "veilsandvegetation:netherwart_brick_chunks"
+      "veilsandvegetation:red_nether_brick_chunks_from_stonecutter"
     ]
   },
   "sends_telemetry_event": false

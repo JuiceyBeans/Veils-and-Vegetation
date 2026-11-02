@@ -24,7 +24,7 @@ public class VVBlockTagsGenerator extends FabricTagProvider<Block> {
                 .add(BRICK_CHUNKS)
                 .add(DEEPSLATE_BRICK_CHUNKS)
                 .add(BLACKSTONE_BRICK_CHUNKS)
-                .add(NETHERWART_BRICK_CHUNKS)
+                .add(RED_NETHER_BRICK_CHUNKS)
                 .add(NETHER_BRICK_CHUNKS)
                 .add(QUARTZ_BRICK_CHUNKS)
                 .add(ENDSTONE_BRICK_CHUNKS)

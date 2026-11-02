@@ -61,7 +61,7 @@ public class VVBlocks {
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(DEEPSLATE_BRICKS)));
     public static final Block BLACKSTONE_BRICK_CHUNKS = registerBlock("blackstone_brick_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(POLISHED_BLACKSTONE_BRICKS)));
-    public static final Block NETHERWART_BRICK_CHUNKS = registerBlock("netherwart_brick_chunks",
+    public static final Block RED_NETHER_BRICK_CHUNKS = registerBlock("red_nether_brick_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(RED_NETHER_BRICKS)));
     public static final Block NETHER_BRICK_CHUNKS = registerBlock("nether_brick_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(NETHER_BRICKS)));

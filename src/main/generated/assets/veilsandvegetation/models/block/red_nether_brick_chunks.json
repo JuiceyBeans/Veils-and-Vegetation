@@ -1,6 +1,6 @@
 {
   "parent": "veilsandvegetation:block/vv_multiface",
   "textures": {
-    "texture": "veilsandvegetation:block/netherwart_brick_chunks"
+    "texture": "veilsandvegetation:block/red_nether_brick_chunks"
   }
 }
