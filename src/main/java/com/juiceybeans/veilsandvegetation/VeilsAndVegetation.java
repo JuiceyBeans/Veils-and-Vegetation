@@ -20,7 +20,7 @@ public class VeilsAndVegetation implements ModInitializer {
     public void onInitialize() {
         VVBlocks.initialize();
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, VeilsAndVegetation.id("veilsandvegetation_blocks"),
-                VVCreativeTabs.UBERGROWTH_BLOCKS);
+                VVCreativeTabs.VV_BLOCKS);
         VVBlockEntityTypes.initialize();
         VVMenus.registerAll();
         VVNetworking.registerServerReceivers();

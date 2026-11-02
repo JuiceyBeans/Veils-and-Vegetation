@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.Block;
 
 public class VVCreativeTabs {
 
-    public static final CreativeModeTab UBERGROWTH_BLOCKS = FabricItemGroup.builder()
+    public static final CreativeModeTab VV_BLOCKS = FabricItemGroup.builder()
             .icon(() -> new ItemStack(VVBlocks.TACKED_NOTES.asItem()))
             .title(Component.translatable("itemGroup.veilsandvegetation.veilsandvegetation_blocks"))
             .displayItems((itemDisplayParameters, output) -> {

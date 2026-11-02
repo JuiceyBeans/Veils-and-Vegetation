@@ -16,7 +16,7 @@ public class VVLangGenerator extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder builder) {
-        builder.add("itemGroup.veilsandvegetation.veilsandvegetation_blocks", "Ubergrowth Blocks");
+        builder.add("itemGroup.veilsandvegetation.veilsandvegetation_blocks", "Veils and Vegetation Blocks");
 
         for (Block block : VVBlocks.blocks) {
             builder.add("block.veilsandvegetation." + BuiltInRegistries.BLOCK.getKey(block).getPath(), getLocalisedName(block));
