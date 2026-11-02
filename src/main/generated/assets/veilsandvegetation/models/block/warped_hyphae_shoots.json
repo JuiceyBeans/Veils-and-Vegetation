@@ -1,6 +1,6 @@
 {
   "parent": "veilsandvegetation:block/vv_multiface",
   "textures": {
-    "texture": "veilsandvegetation:block/budding_crimson_hyphae"
+    "texture": "veilsandvegetation:block/warped_hyphae_shoots"
   }
 }

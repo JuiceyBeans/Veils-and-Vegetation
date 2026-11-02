@@ -13,8 +13,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Consumer;
 
 import static com.juiceybeans.veilsandvegetation.init.VVBlocks.*;
-import static com.juiceybeans.veilsandvegetation.init.VVBlocks.CRIMSON_HYPHAE;
-import static com.juiceybeans.veilsandvegetation.init.VVBlocks.WARPED_HYPHAE;
+import static com.juiceybeans.veilsandvegetation.init.VVBlocks.CRIMSON_HYPHAE_SHOOTS;
+import static com.juiceybeans.veilsandvegetation.init.VVBlocks.WARPED_HYPHAE_SHOOTS;
 import static net.minecraft.world.item.Items.*;
 
 public class VVRecipeGenerator extends FabricRecipeProvider {
@@ -547,12 +547,12 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .unlockedBy("has_item", has(MYCELIUM))
                 .save(writer, VeilsAndVegetation.id("mycelium_hyphae"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, CRIMSON_HYPHAE, 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, CRIMSON_HYPHAE_SHOOTS, 4)
                 .requires(CRIMSON_FUNGUS, 3)
                 .unlockedBy("has_item", has(CRIMSON_FUNGUS))
                 .save(writer, VeilsAndVegetation.id("crimson_hyphae"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, WARPED_HYPHAE, 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, WARPED_HYPHAE_SHOOTS, 4)
                 .requires(WARPED_FUNGUS, 3)
                 .unlockedBy("has_item", has(WARPED_FUNGUS))
                 .save(writer, VeilsAndVegetation.id("warped_hyphae"));

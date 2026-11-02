@@ -5,7 +5,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:warped_hyphae",
+          "block": "veilsandvegetation:budding_warped_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "down": "true"
@@ -19,7 +19,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:warped_hyphae",
+          "block": "veilsandvegetation:budding_warped_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "up": "true"
@@ -33,7 +33,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:warped_hyphae",
+          "block": "veilsandvegetation:budding_warped_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "north": "true"
@@ -47,7 +47,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:warped_hyphae",
+          "block": "veilsandvegetation:budding_warped_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "south": "true"
@@ -61,7 +61,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:warped_hyphae",
+          "block": "veilsandvegetation:budding_warped_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "west": "true"
@@ -75,7 +75,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:warped_hyphae",
+          "block": "veilsandvegetation:budding_warped_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "east": "true"
@@ -89,38 +89,15 @@
   "pools": [
     {
       "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:any_of",
-              "terms": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "items": [
-                      "minecraft:shears"
-                    ]
-                  }
-                },
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "name": "veilsandvegetation:warped_hyphae"
+          "name": "veilsandvegetation:warped_hyphae_shoots"
         }
       ],
       "functions": [

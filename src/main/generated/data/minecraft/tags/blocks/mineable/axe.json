@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "veilsandvegetation:budding_crimson_hyphae",
-    "veilsandvegetation:crimson_hyphae",
-    "veilsandvegetation:budding_warped_hyphae",
-    "veilsandvegetation:warped_hyphae",
+    "veilsandvegetation:budding_crimson_hyphae_shoots",
+    "veilsandvegetation:crimson_hyphae_shoots",
+    "veilsandvegetation:budding_warped_hyphae_shoots",
+    "veilsandvegetation:warped_hyphae_shoots",
     "veilsandvegetation:oak_creeps",
     "veilsandvegetation:stripped_oak_creeps",
     "veilsandvegetation:birch_creeps",

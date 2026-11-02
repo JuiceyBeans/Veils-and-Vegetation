@@ -5,7 +5,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:budding_crimson_hyphae",
+          "block": "veilsandvegetation:budding_crimson_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "down": "true"
@@ -19,7 +19,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:budding_crimson_hyphae",
+          "block": "veilsandvegetation:budding_crimson_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "up": "true"
@@ -33,7 +33,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:budding_crimson_hyphae",
+          "block": "veilsandvegetation:budding_crimson_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "north": "true"
@@ -47,7 +47,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:budding_crimson_hyphae",
+          "block": "veilsandvegetation:budding_crimson_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "south": "true"
@@ -61,7 +61,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:budding_crimson_hyphae",
+          "block": "veilsandvegetation:budding_crimson_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "west": "true"
@@ -75,7 +75,7 @@
       "add": true,
       "conditions": [
         {
-          "block": "veilsandvegetation:budding_crimson_hyphae",
+          "block": "veilsandvegetation:budding_crimson_hyphae_shoots",
           "condition": "minecraft:block_state_property",
           "properties": {
             "east": "true"
@@ -97,7 +97,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "veilsandvegetation:crimson_hyphae"
+          "name": "veilsandvegetation:crimson_hyphae_shoots"
         }
       ],
       "functions": [

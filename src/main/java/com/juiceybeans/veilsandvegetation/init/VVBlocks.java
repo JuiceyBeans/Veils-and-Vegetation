@@ -190,16 +190,16 @@ public class VVBlocks {
             FabricBlockSettings.copyOf(HANGING_ROOTS).burnable()));
     public static final Block MYCELIUM_HYPHAE = registerBlock("mycelium_hyphae",
             new SpreadableVVBlock(FabricBlockSettings.copyOf(MYCELIUM).burnable()));
-    public static final Block BUDDING_CRIMSON_HYPHAE = registerBlock("budding_crimson_hyphae",
+    public static final Block BUDDING_CRIMSON_HYPHAE_SHOOTS = registerBlock("budding_crimson_hyphae_shoots",
             new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE),
                     Items.CRIMSON_FUNGUS.getDefaultInstance()));
-    public static final Block CRIMSON_HYPHAE = registerBlock("crimson_hyphae",
-            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE), BUDDING_CRIMSON_HYPHAE));
-    public static final Block BUDDING_WARPED_HYPHAE = registerBlock("budding_warped_hyphae",
+    public static final Block CRIMSON_HYPHAE_SHOOTS = registerBlock("crimson_hyphae_shoots",
+            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE), BUDDING_CRIMSON_HYPHAE_SHOOTS));
+    public static final Block BUDDING_WARPED_HYPHAE_SHOOTS = registerBlock("budding_warped_hyphae_shoots",
             new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE),
                     Items.WARPED_FUNGUS.getDefaultInstance()));
-    public static final Block WARPED_HYPHAE = registerBlock("warped_hyphae",
-            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE), BUDDING_WARPED_HYPHAE));
+    public static final Block WARPED_HYPHAE_SHOOTS = registerBlock("warped_hyphae_shoots",
+            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE), BUDDING_WARPED_HYPHAE_SHOOTS));
     public static final Block OAK_FOLIAGE = registerBlock("oak_foliage",
             new BaseVVBlock(FabricBlockSettings.copyOf(OAK_LEAVES)));
     public static final Block SPRUCE_FOLIAGE = registerBlock("spruce_foliage",
@@ -306,7 +306,7 @@ public class VVBlocks {
     public static final Block STRIPPED_CHERRY_CREEPS = registerBlock("stripped_cherry_creeps",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_CHERRY_WOOD)));
     public static final Block WARPED_CREEPS = registerBlock("warped_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(WARPED_HYPHAE)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(WARPED_HYPHAE_SHOOTS)));
     public static final Block STRIPPED_WARPED_CREEPS = registerBlock("stripped_warped_creeps",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_WARPED_HYPHAE)));
     public static final Block CRIMSON_CREEPS = registerBlock("crimson_creeps",
@@ -341,15 +341,15 @@ public class VVBlocks {
         ((SpreadableVVBlock) FRUITING_RED_HYPHAE).setSpreadBlock((BaseVVBlock) RED_HYPHAE);
         ((SpreadableVVBlock) FRUITING_BROWN_HYPHAE).setSpreadBlock((BaseVVBlock) BROWN_HYPHAE);
         ((SpreadableVVBlock) FRUITING_GLOWBERRY_CREEPS).setSpreadBlock((BaseVVBlock) GLOWBERRY_CREEPS);
-        ((SpreadableVVBlock) BUDDING_CRIMSON_HYPHAE).setSpreadBlock((BaseVVBlock) CRIMSON_HYPHAE);
-        ((SpreadableVVBlock) BUDDING_WARPED_HYPHAE).setSpreadBlock((BaseVVBlock) WARPED_HYPHAE);
+        ((SpreadableVVBlock) BUDDING_CRIMSON_HYPHAE_SHOOTS).setSpreadBlock((BaseVVBlock) CRIMSON_HYPHAE_SHOOTS);
+        ((SpreadableVVBlock) BUDDING_WARPED_HYPHAE_SHOOTS).setSpreadBlock((BaseVVBlock) WARPED_HYPHAE_SHOOTS);
         ((SpreadableVVBlock) AQUA_GOO_NODES).setSpreadBlock((BaseVVBlock) AQUA_GOO_HYPHAE);
         ((SpreadableVVBlock) OCHRE_GOO_NODES).setSpreadBlock((BaseVVBlock) OCHRE_GOO_HYPHAE);
         ((SpreadableVVBlock) PEARLESCENT_GOO_NODES).setSpreadBlock((BaseVVBlock) PEARLESCENT_GOO_HYPHAE);
         ((SpreadableVVBlock) VERDANT_GOO_NODES).setSpreadBlock((BaseVVBlock) VERDANT_GOO_HYPHAE);
 
-        ((BuddingHyphaeVVBlock) BUDDING_CRIMSON_HYPHAE).setStrippedBlock(CRIMSON_HYPHAE);
-        ((BuddingHyphaeVVBlock) BUDDING_WARPED_HYPHAE).setStrippedBlock(WARPED_HYPHAE);
+        ((BuddingHyphaeVVBlock) BUDDING_CRIMSON_HYPHAE_SHOOTS).setStrippedBlock(CRIMSON_HYPHAE_SHOOTS);
+        ((BuddingHyphaeVVBlock) BUDDING_WARPED_HYPHAE_SHOOTS).setStrippedBlock(WARPED_HYPHAE_SHOOTS);
 
         ((FruitingHyphaeVVBlock) BUDDING_WARPED_VINES).setShearedBlock(WARPED_VINES);
         ((FruitingHyphaeVVBlock) FRUITING_RED_HYPHAE).setShearedBlock(RED_HYPHAE);
@@ -368,8 +368,8 @@ public class VVBlocks {
         CompostingChanceRegistry.INSTANCE.add(BROWN_HYPHAE, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(ROOT_CREEPS, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(MYCELIUM_HYPHAE, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(CRIMSON_HYPHAE, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(WARPED_HYPHAE, 0.3f);
+        CompostingChanceRegistry.INSTANCE.add(CRIMSON_HYPHAE_SHOOTS, 0.3f);
+        CompostingChanceRegistry.INSTANCE.add(WARPED_HYPHAE_SHOOTS, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(OAK_FOLIAGE, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(SPRUCE_FOLIAGE, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(BIRCH_FOLIAGE, 0.3f);

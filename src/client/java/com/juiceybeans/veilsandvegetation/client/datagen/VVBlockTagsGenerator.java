@@ -63,10 +63,10 @@ public class VVBlockTagsGenerator extends FabricTagProvider<Block> {
                 .add(CRIMSON_NYLIUM_SMATTERING);
 
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
-                .add(BUDDING_CRIMSON_HYPHAE)
-                .add(CRIMSON_HYPHAE)
-                .add(BUDDING_WARPED_HYPHAE)
-                .add(WARPED_HYPHAE)
+                .add(BUDDING_CRIMSON_HYPHAE_SHOOTS)
+                .add(CRIMSON_HYPHAE_SHOOTS)
+                .add(BUDDING_WARPED_HYPHAE_SHOOTS)
+                .add(WARPED_HYPHAE_SHOOTS)
                 .add(OAK_CREEPS)
                 .add(STRIPPED_OAK_CREEPS)
                 .add(BIRCH_CREEPS)
