@@ -1,5 +1,5 @@
 {
-  "ambientocclusion": false,
+  "ambientocclusion": true,
   "textures": {
     "particle": "#texture",
     "texture": "#texture"
@@ -16,7 +16,7 @@
         16,
         0.8
       ],
-      "shade": false,
+      "shade": true,
       "faces": {
         "north": {
           "uv": [
