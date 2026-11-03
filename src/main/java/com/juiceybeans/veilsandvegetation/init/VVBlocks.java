@@ -189,7 +189,7 @@ public class VVBlocks {
     public static final Block ROOT_CREEPS = registerBlock("root_creeps", new SpreadableVVBlock(
             FabricBlockSettings.copyOf(HANGING_ROOTS).burnable().ignitedByLava()));
     public static final Block MYCELIUM_HYPHAE = registerBlock("mycelium_hyphae",
-            new SpreadableVVBlock(FabricBlockSettings.copyOf(MYCELIUM).burnable()));
+            new SpreadableVVBlock(FabricBlockSettings.copyOf(MYCELIUM).burnable().instabreak()));
     public static final Block BUDDING_CRIMSON_HYPHAE_SHOOTS = registerBlock("budding_crimson_hyphae_shoots",
             new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).instabreak().ignitedByLava(),
                     Items.CRIMSON_FUNGUS.getDefaultInstance()));
