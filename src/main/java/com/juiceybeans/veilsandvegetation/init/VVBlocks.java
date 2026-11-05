@@ -347,12 +347,7 @@ public class VVBlocks {
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(BAMBOO_PLANKS).ignitedByLava()));
 
     public static void initialize() {
-        ((SpreadableVVBlock) BUDDING_WARPED_VINES).setSpreadBlock((BaseVVBlock) WARPED_VINES);
-        ((SpreadableVVBlock) FRUITING_RED_HYPHAE).setSpreadBlock((BaseVVBlock) RED_HYPHAE);
-        ((SpreadableVVBlock) FRUITING_BROWN_HYPHAE).setSpreadBlock((BaseVVBlock) BROWN_HYPHAE);
         ((SpreadableVVBlock) FRUITING_GLOWBERRY_CREEPS).setSpreadBlock((BaseVVBlock) GLOWBERRY_CREEPS);
-        ((SpreadableVVBlock) BUDDING_CRIMSON_HYPHAE_SHOOTS).setSpreadBlock((BaseVVBlock) CRIMSON_HYPHAE_SHOOTS);
-        ((SpreadableVVBlock) BUDDING_WARPED_HYPHAE_SHOOTS).setSpreadBlock((BaseVVBlock) WARPED_HYPHAE_SHOOTS);
         ((SpreadableVVBlock) AQUA_GOO_NODES).setSpreadBlock((BaseVVBlock) AQUA_GOO_HYPHAE);
         ((SpreadableVVBlock) OCHRE_GOO_NODES).setSpreadBlock((BaseVVBlock) OCHRE_GOO_HYPHAE);
         ((SpreadableVVBlock) PEARLESCENT_GOO_NODES).setSpreadBlock((BaseVVBlock) PEARLESCENT_GOO_HYPHAE);
