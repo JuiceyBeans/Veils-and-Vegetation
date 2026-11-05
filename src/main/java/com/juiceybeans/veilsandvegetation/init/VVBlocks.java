@@ -271,10 +271,10 @@ public class VVBlocks {
     public static final Block VERDANT_GOO_HYPHAE = registerBlock("verdant_goo_hyphae",
             new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
                     .mapColor(MapColor.GLOW_LICHEN).lightLevel(8).sound(SoundType.SLIME_BLOCK)));
-    public static final Block BEACHED_KELP = registerBlock("beached_kelp", new BaseVVBlock(FabricBlockSettings.of()
+    public static final Block BEACHED_KELP = registerBlock("beached_kelp", new WaterloggableVVBlock(FabricBlockSettings.of()
             .burnable().strength(0.2f, 0.2f).requiresTool().mapColor(MapColor.COLOR_GREEN).sound(SoundType.WET_GRASS)));
     public static final Block BEACHED_SEAGRASS = registerBlock("beached_seagrass",
-            new BaseVVBlock(FabricBlockSettings.of().burnable().strength(0.2f, 0.2f).requiresTool()
+            new WaterloggableVVBlock(FabricBlockSettings.of().burnable().strength(0.2f, 0.2f).requiresTool()
                     .mapColor(MapColor.COLOR_GREEN).sound(SoundType.WET_GRASS)));
     public static final Block OAK_CREEPS = registerBlock("oak_creeps",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(OAK_WOOD).ignitedByLava()));
@@ -319,7 +319,7 @@ public class VVBlocks {
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_CRIMSON_HYPHAE).ignitedByLava()));
     public static final Block GRIME = registerBlock("grime", new BaseVVBlock(
             FabricBlockSettings.of().instabreak().mapColor(MapColor.COLOR_GRAY).sound(SoundType.SNOW)));
-    public static final Block RUST = registerBlock("rust", new BaseVVBlock(
+    public static final Block RUST = registerBlock("rust", new WaterloggableVVBlock(
             FabricBlockSettings.of().instabreak().mapColor(MapColor.COLOR_ORANGE).sound(SoundType.SNOW)));
     public static final Block DUST = registerBlock("dust", new BaseVVBlock(FabricBlockSettings.of().hardness(0)
             .resistance(0).mapColor(MapColor.COLOR_LIGHT_GRAY).sound(SoundType.SNOW)));
