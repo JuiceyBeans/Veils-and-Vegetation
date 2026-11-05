@@ -95,7 +95,10 @@ public class VVBlockTagsGenerator extends FabricTagProvider<Block> {
                 .add(SHODDY_ACACIA_PLANKS)
                 .add(SHODDY_DARK_OAK_PLANKS)
                 .add(SHODDY_MANGROVE_PLANKS)
-                .add(SHODDY_CHERRY_PLANKS);
+                .add(SHODDY_CHERRY_PLANKS)
+                .add(SHODDY_CRIMSON_PLANKS)
+                .add(SHODDY_WARPED_PLANKS)
+                .add(SHODDY_BAMBOO_PLANKS);
 
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(DIRT_SMATTERING)

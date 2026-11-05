@@ -118,6 +118,9 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         createShoddyPlanksTable(SHODDY_DARK_OAK_PLANKS);
         createShoddyPlanksTable(SHODDY_MANGROVE_PLANKS);
         createShoddyPlanksTable(SHODDY_CHERRY_PLANKS);
+        createShoddyPlanksTable(SHODDY_CRIMSON_PLANKS);
+        createShoddyPlanksTable(SHODDY_WARPED_PLANKS);
+        createShoddyPlanksTable(SHODDY_BAMBOO_PLANKS);
 
         createShearsOrSilkTouchOrFixedDropTable(NETHER_WART_SPROUTS, Items.NETHER_WART);
         createShearsOrSilkTouchTable(CRIMSON_VINES);

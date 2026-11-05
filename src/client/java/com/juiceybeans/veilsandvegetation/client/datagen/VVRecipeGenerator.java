@@ -863,5 +863,23 @@ public class VVRecipeGenerator extends FabricRecipeProvider {
                 .requires(IRON_NUGGET)
                 .unlockedBy("has_item", has(CHERRY_PLANKS))
                 .save(writer, VeilsAndVegetation.id("shoddy_cherry_planks"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, SHODDY_CRIMSON_PLANKS, 9)
+                .requires(CRIMSON_PLANKS, 3)
+                .requires(IRON_NUGGET)
+                .unlockedBy("has_item", has(CRIMSON_PLANKS))
+                .save(writer, VeilsAndVegetation.id("shoddy_crimson_planks"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, SHODDY_WARPED_PLANKS, 9)
+                .requires(WARPED_PLANKS, 3)
+                .requires(IRON_NUGGET)
+                .unlockedBy("has_item", has(WARPED_PLANKS))
+                .save(writer, VeilsAndVegetation.id("shoddy_warped_planks"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, SHODDY_BAMBOO_PLANKS, 9)
+                .requires(BAMBOO_PLANKS, 3)
+                .requires(IRON_NUGGET)
+                .unlockedBy("has_item", has(BAMBOO_PLANKS))
+                .save(writer, VeilsAndVegetation.id("shoddy_bamboo_planks"));
     }
 }

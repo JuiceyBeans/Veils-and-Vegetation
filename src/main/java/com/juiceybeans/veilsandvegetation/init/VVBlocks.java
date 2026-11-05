@@ -339,6 +339,12 @@ public class VVBlocks {
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(MANGROVE_PLANKS).ignitedByLava()));
     public static final Block SHODDY_CHERRY_PLANKS = registerBlock("shoddy_cherry_planks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(CHERRY_PLANKS).ignitedByLava()));
+    public static final Block SHODDY_CRIMSON_PLANKS = registerBlock("shoddy_crimson_planks",
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(CRIMSON_PLANKS)));
+    public static final Block SHODDY_WARPED_PLANKS = registerBlock("shoddy_warped_planks",
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(WARPED_PLANKS)));
+    public static final Block SHODDY_BAMBOO_PLANKS = registerBlock("shoddy_bamboo_planks",
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(BAMBOO_PLANKS).ignitedByLava()));
 
     public static void initialize() {
         ((SpreadableVVBlock) BUDDING_WARPED_VINES).setSpreadBlock((BaseVVBlock) WARPED_VINES);
@@ -447,6 +453,7 @@ public class VVBlocks {
         FuelRegistry.INSTANCE.add(VVBlocks.SHODDY_DARK_OAK_PLANKS, 200);
         FuelRegistry.INSTANCE.add(VVBlocks.SHODDY_MANGROVE_PLANKS, 200);
         FuelRegistry.INSTANCE.add(VVBlocks.SHODDY_CHERRY_PLANKS, 200);
+        FuelRegistry.INSTANCE.add(VVBlocks.SHODDY_BAMBOO_PLANKS, 200);
         FuelRegistry.INSTANCE.add(VVBlocks.COAL_FRAGMENTS, 1600);
     }
 }
