@@ -87,8 +87,6 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         dropOtherMultiface(BUDDING_CRIMSON_HYPHAE_SHOOTS, CRIMSON_HYPHAE_SHOOTS);
         dropOtherMultiface(BUDDING_WARPED_HYPHAE_SHOOTS, WARPED_HYPHAE_SHOOTS);
 
-        dropOtherMultiface(BEACHED_KELP, Items.KELP);
-
         createShearsOrSilkTouchOrFixedDropTable(OAK_CREEPS, Items.STICK);
         createShearsOrSilkTouchOrFixedDropTable(STRIPPED_OAK_CREEPS, Items.STICK);
         createShearsOrSilkTouchOrFixedDropTable(BIRCH_CREEPS, Items.STICK);
@@ -159,7 +157,7 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         createShearsOrSilkTouchTable(PEARLESCENT_GOO_HYPHAE);
         createShearsOrSilkTouchTable(VERDANT_GOO_HYPHAE);
 
-        createShearsOrSilkTouchTable(BEACHED_KELP);
+        createShearsOrSilkTouchOrFixedDropTable(BEACHED_KELP, Items.KELP);
         createShearsOrSilkTouchTable(BEACHED_SEAGRASS);
     }
 
