@@ -254,28 +254,28 @@ public class VVBlocks {
             .copyOf(MOSS_BLOCK).burnable(), true));
 
     public static final Block AQUA_GOO_NODES = registerBlock("aqua_goo_nodes",
-            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
+            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f)
                     .mapColor(MapColor.COLOR_CYAN).lightLevel(4).sound(SoundType.SLIME_BLOCK)));
     public static final Block OCHRE_GOO_NODES = registerBlock("ochre_goo_nodes",
-            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
+            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f)
                     .mapColor(MapColor.SAND).lightLevel(4).sound(SoundType.SLIME_BLOCK)));
     public static final Block PEARLESCENT_GOO_NODES = registerBlock("pearlescent_goo_nodes",
-            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
+            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f)
                     .mapColor(MapColor.COLOR_PINK).lightLevel(4).sound(SoundType.SLIME_BLOCK)));
     public static final Block VERDANT_GOO_NODES = registerBlock("verdant_goo_nodes",
-            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
+            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f)
                     .mapColor(MapColor.GLOW_LICHEN).lightLevel(4).sound(SoundType.SLIME_BLOCK)));
     public static final Block AQUA_GOO_HYPHAE = registerBlock("aqua_goo_hyphae",
-            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
+            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f)
                     .mapColor(MapColor.COLOR_CYAN).lightLevel(8).sound(SoundType.SLIME_BLOCK), true));
     public static final Block OCHRE_GOO_HYPHAE = registerBlock("ochre_goo_hyphae",
-            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
+            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f)
                     .mapColor(MapColor.SAND).lightLevel(8).sound(SoundType.SLIME_BLOCK), true));
     public static final Block PEARLESCENT_GOO_HYPHAE = registerBlock("pearlescent_goo_hyphae",
-            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
+            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f)
                     .mapColor(MapColor.COLOR_PINK).lightLevel(8).sound(SoundType.SLIME_BLOCK), true));
     public static final Block VERDANT_GOO_HYPHAE = registerBlock("verdant_goo_hyphae",
-            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
+            new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f)
                     .mapColor(MapColor.GLOW_LICHEN).lightLevel(8).sound(SoundType.SLIME_BLOCK), true));
 
     public static final Block BEACHED_KELP = registerBlock("beached_kelp",
