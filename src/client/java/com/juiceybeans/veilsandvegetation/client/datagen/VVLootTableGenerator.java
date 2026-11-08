@@ -31,6 +31,7 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
     public void generate() {
         Set<Block> dropNothing = Set.of(
                 COBBLESTONE_CHUNKS,
+                MOSSY_COBBLESTONE_CHUNKS,
                 PRISMARINE_CHUNKS,
                 SANDSTONE_CHUNKS,
                 RED_SANDSTONE_CHUNKS,
