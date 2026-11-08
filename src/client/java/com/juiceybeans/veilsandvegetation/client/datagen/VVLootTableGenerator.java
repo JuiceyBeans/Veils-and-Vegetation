@@ -56,9 +56,7 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
                 WARPED_NYLIUM_SMATTERING,
                 CRIMSON_NYLIUM_SMATTERING,
                 SOUL_SOIL_SMATTERING,
-                SOUL_SAND_SMATTERING,
-                FRUITING_GLOWBERRY_CREEPS,
-                FRUITING_SWEET_BERRY_FOLIAGE
+                SOUL_SAND_SMATTERING
         );
 
         for (Block block : blocks) {
@@ -153,7 +151,7 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
 
         createShearsOrSilkTouchTable(GLOWBERRY_CREEPS);
         createShearsOrSilkTouchTable(BARE_GLOWBERRY_CREEPS);
-        createFruitingShearedTable(FRUITING_GLOWBERRY_CREEPS, GLOWBERRY_CREEPS);
+        createFruitingGlowberryTable(FRUITING_GLOWBERRY_CREEPS, GLOWBERRY_CREEPS, Items.GLOW_BERRIES);
         createFruitingShearedTable(FRUITING_SWEET_BERRY_FOLIAGE, SWEET_BERRY_FOLIAGE);
         createShearsOrSilkTouchTable(BAMBOO_FOLIAGE);
         createShearsOrSilkTouchTable(MOSS_CLUMPS);
@@ -217,12 +215,12 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
     private void createFruitingTable(Block block, ItemLike hyphae, ItemLike mushroom) {
         var builder = LootTable.lootTable()
                 .withPool(this.applyExplosionCondition(hyphae, LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1.0f))
-                        .add(LootItem.lootTableItem(hyphae)))
+                                .setRolls(ConstantValue.exactly(1.0f))
+                                .add(LootItem.lootTableItem(hyphae)))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0))))
                 .withPool(this.applyExplosionCondition(mushroom, LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1.0f))
-                        .add(LootItem.lootTableItem(mushroom)))
+                                .setRolls(ConstantValue.exactly(1.0f))
+                                .add(LootItem.lootTableItem(mushroom)))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0))));
 
         for (Direction dir : Direction.values()) {
@@ -235,6 +233,52 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         }
 
         this.add(block, builder);
+    }
+
+    private void createFruitingShearedTable(Block fruiting, Block sheared) {
+        var builder = LootTable.lootTable().withPool(this.applyExplosionCondition(fruiting, LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0f))
+                .add(LootItem.lootTableItem(sheared).when(HAS_SHEARS_OR_SILK_TOUCH))
+                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0)))));
+
+        for (Direction dir : Direction.values()) {
+            BooleanProperty prop = PipeBlock.PROPERTY_BY_DIRECTION.get(dir);
+            if (fruiting.getStateDefinition().getProperties().contains(prop)) {
+                builder.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f), true)
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(fruiting)
+                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(prop, true))));
+            }
+        }
+
+        this.add(fruiting, builder);
+    }
+
+    private void createFruitingGlowberryTable(Block fruiting, Block base, ItemLike berry) {
+        LootPool.Builder blockPool = LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0f))
+                .add(LootItem.lootTableItem(base).when(HAS_SHEARS))
+                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0)));
+
+        LootPool.Builder berryPool = LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0f))
+                .add(LootItem.lootTableItem(berry))
+                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0)));
+
+        for (Direction dir : Direction.values()) {
+            BooleanProperty prop = PipeBlock.PROPERTY_BY_DIRECTION.get(dir);
+            if (fruiting.getStateDefinition().getProperties().contains(prop)) {
+                blockPool.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f), true)
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(fruiting)
+                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(prop, true))));
+                berryPool.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f), true)
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(fruiting)
+                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(prop, true))));
+            }
+        }
+
+        this.add(fruiting, LootTable.lootTable()
+                .withPool(this.applyExplosionCondition(base, blockPool))
+                .withPool(this.applyExplosionCondition(berry, berryPool)));
     }
 
     private void createShoddyPlanksTable(Block block) {
@@ -306,16 +350,16 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
 
     private void createShearsOrSilkTouchOrChancedDropTable(Block block, ItemLike drop, float chance) {
         LootPool.Builder itemPool = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1.0f))
-                        .add(LootItem.lootTableItem(drop)
-                                .when(LootItemRandomChanceCondition.randomChance(chance)))
-                        .when(HAS_SHEARS_OR_SILK_TOUCH.invert());
+                .setRolls(ConstantValue.exactly(1.0f))
+                .add(LootItem.lootTableItem(drop)
+                        .when(LootItemRandomChanceCondition.randomChance(chance)))
+                .when(HAS_SHEARS_OR_SILK_TOUCH.invert());
 
         LootPool.Builder blockPool = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1.0f))
-                        .add(LootItem.lootTableItem(block))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0)))
-                        .when(HAS_SHEARS_OR_SILK_TOUCH);
+                .setRolls(ConstantValue.exactly(1.0f))
+                .add(LootItem.lootTableItem(block))
+                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0)))
+                .when(HAS_SHEARS_OR_SILK_TOUCH);
 
         for (Direction dir : Direction.values()) {
             BooleanProperty prop = PipeBlock.PROPERTY_BY_DIRECTION.get(dir);
@@ -336,24 +380,6 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
                 .withPool(this.applyExplosionCondition(block, blockPool));
 
         this.add(block, builder);
-    }
-
-    private void createFruitingShearedTable(Block fruiting, Block sheared) {
-        var builder = LootTable.lootTable().withPool(this.applyExplosionCondition(fruiting, LootPool.lootPool()
-                .setRolls(ConstantValue.exactly(1.0f))
-                .add(LootItem.lootTableItem(sheared).when(HAS_SHEARS_OR_SILK_TOUCH))
-                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0)))));
-
-        for (Direction dir : Direction.values()) {
-            BooleanProperty prop = PipeBlock.PROPERTY_BY_DIRECTION.get(dir);
-            if (fruiting.getStateDefinition().getProperties().contains(prop)) {
-                builder.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f), true)
-                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(fruiting)
-                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(prop, true))));
-            }
-        }
-
-        this.add(fruiting, builder);
     }
 
     private void createRoseCreepsTable(Block block) {
