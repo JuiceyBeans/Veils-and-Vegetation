@@ -49,6 +49,7 @@ public class VVBlocks {
             FabricBlockSettings.of().burnable().instabreak().mapColor(MapColor.COLOR_BROWN).sound(SoundType.GRASS)));
     public static final Block SPLAYED_HIDE = registerBlock("splayed_hide", new BaseVVBlock(
             FabricBlockSettings.of().burnable().instabreak().mapColor(MapColor.COLOR_BROWN).sound(SoundType.GRASS)));
+
     public static final Block STONE_BRICK_CHUNKS = registerBlock("stone_brick_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(STONE_BRICKS)));
     public static final Block MOSSY_STONE_BRICK_CHUNKS = registerBlock("mossy_stone_brick_chunks",
@@ -71,6 +72,7 @@ public class VVBlocks {
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(END_STONE_BRICKS)));
     public static final Block PURPUR_CHUNKS = registerBlock("purpur_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(PURPUR_BLOCK)));
+
     public static final Block COPPER_PLATING = registerBlock("copper_plating",
             new CopperVVBlock(FabricBlockSettings.copyOf(COPPER_BLOCK), WeatheringCopper.WeatherState.UNAFFECTED));
     public static final Block EXPOSED_COPPER_PLATING = registerBlock("exposed_copper_plating",
@@ -93,6 +95,7 @@ public class VVBlocks {
             .copyOf(IRON_BLOCK)));
     public static final Block NETHERITE_PLATING = registerBlock("netherite_plating",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(NETHERITE_BLOCK)));
+
     public static final Block COPPER_ORE_FRAGMENTS = registerBlock("copper_ore_fragments",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(COPPER_ORE).mapColor(MapColor.COLOR_ORANGE)));
     public static final Block IRON_ORE_FRAGMENTS = registerBlock("iron_ore_fragments",
@@ -112,6 +115,7 @@ public class VVBlocks {
                     .requiresCorrectToolForDrops().mapColor(MapColor.COLOR_RED)));
     public static final Block LAPIS_LAZULI_FRAGMENTS = registerBlock("lapis_lazuli_fragments",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(LAPIS_ORE).mapColor(MapColor.LAPIS)));
+
     public static final Block MOSSY_COBBLESTONE_CHUNKS = registerBlock("mossy_cobblestone_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(MOSSY_COBBLESTONE)));
     public static final Block COBBLESTONE_CHUNKS = registerBlock("cobblestone_chunks",
@@ -132,76 +136,79 @@ public class VVBlocks {
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(ANDESITE)));
     public static final Block NETHERRACK_CHUNKS = registerBlock("netherrack_chunks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(NETHERRACK)));
+
     public static final Block DIRT_SMATTERING = registerBlock("dirt_smattering",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(DIRT)));
     public static final Block MUD_SMATTERING = registerBlock("mud_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(MUD)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(MUD).burnable()));
     public static final Block CLAY_SMATTERING = registerBlock("clay_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(CLAY)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(CLAY).burnable()));
     public static final Block GRAVEL_SMATTERING = registerBlock("gravel_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(GRAVEL)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(GRAVEL).burnable()));
     public static final Block SAND_SMATTERING = registerBlock("sand_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(SAND)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(SAND).burnable()));
     public static final Block RED_SAND_SMATTERING = registerBlock("red_sand_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(RED_SAND)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(RED_SAND).burnable()));
     public static final Block ROOTED_DIRT_SMATTERING = registerBlock("rooted_dirt_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(ROOTED_DIRT)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(ROOTED_DIRT).burnable()));
     public static final Block GRASS_SMATTERING = registerBlock("grass_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(GRASS_BLOCK)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(GRASS_BLOCK).burnable()));
     public static final Block PODZOL_SMATTERING = registerBlock("podzol_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(PODZOL)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(PODZOL).burnable()));
     public static final Block WARPED_NYLIUM_SMATTERING = registerBlock("warped_nylium_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(WARPED_NYLIUM)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(WARPED_NYLIUM).burnable()));
     public static final Block CRIMSON_NYLIUM_SMATTERING = registerBlock("crimson_nylium_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(CRIMSON_NYLIUM)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(CRIMSON_NYLIUM).burnable()));
     public static final Block SOUL_SOIL_SMATTERING = registerBlock("soul_soil_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(SOUL_SOIL)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(SOUL_SOIL).burnable()));
     public static final Block SOUL_SAND_SMATTERING = registerBlock("soul_sand_smattering",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(Blocks.SOUL_SAND)));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(Blocks.SOUL_SAND).burnable()));
+
     public static final Block SLIME_GLOBULES = registerBlock("slime_globules", new BaseVVBlock(
-            FabricBlockSettings.copyOf(SLIME_BLOCK)));
+            FabricBlockSettings.copyOf(SLIME_BLOCK).burnable()));
     public static final Block NETHER_WART_SPROUTS = registerBlock("nether_wart_sprouts",
-            new BaseVVBlock(FabricBlockSettings.copyOf(NETHER_WART)));
+            new BaseVVBlock(FabricBlockSettings.copyOf(NETHER_WART).burnable()));
     public static final Block CRIMSON_VINES = registerBlock("crimson_vines", new SpreadableVVBlock(FabricBlockSettings
-            .copyOf(WEEPING_VINES)));
+            .copyOf(WEEPING_VINES).burnable()));
     public static final Block ROSE_CREEPS = registerBlock("rose_creeps", new RoseCreepsBlock(
-            FabricBlockSettings.copyOf(ROSE_BUSH).burnable().ignitedByLava()));
+            FabricBlockSettings.copyOf(ROSE_BUSH).burnable()));
     public static final Block ROSE_VINES = registerBlock("rose_vines", new BonemealableVVBlock(
-            FabricBlockSettings.copyOf(ROSE_BUSH).burnable().ignitedByLava(), ROSE_CREEPS));
+            FabricBlockSettings.copyOf(ROSE_BUSH).burnable(), ROSE_CREEPS));
     public static final Block WARPED_GROWTHS = registerBlock("warped_growths", new SpreadableVVBlock(FabricBlockSettings
-            .copyOf(Blocks.NETHER_SPROUTS)));
+            .copyOf(Blocks.NETHER_SPROUTS).burnable()));
     public static final Block BUDDING_WARPED_VINES = registerBlock("budding_warped_vines",
-            new FruitingHyphaeVVBlock(FabricBlockSettings.copyOf(WARPED_ROOTS).ignitedByLava()));
+            new FruitingHyphaeVVBlock(FabricBlockSettings.copyOf(WARPED_ROOTS).burnable()));
     public static final Block WARPED_VINES = registerBlock("warped_vines", new BonemealableVVBlock(
-            FabricBlockSettings.copyOf(WARPED_ROOTS).ignitedByLava(), BUDDING_WARPED_VINES));
+            FabricBlockSettings.copyOf(WARPED_ROOTS).burnable(), BUDDING_WARPED_VINES));
     public static final Block FRUITING_RED_HYPHAE = registerBlock("fruiting_red_hyphae", new FruitingHyphaeVVBlock(
-            FabricBlockSettings.copyOf(RED_MUSHROOM).burnable().ignitedByLava()));
+            FabricBlockSettings.copyOf(RED_MUSHROOM).burnable()));
     public static final Block RED_HYPHAE = registerBlock("red_hyphae", new BonemealableVVBlock(
-            FabricBlockSettings.copyOf(RED_MUSHROOM).burnable().ignitedByLava(), FRUITING_RED_HYPHAE));
+            FabricBlockSettings.copyOf(RED_MUSHROOM).burnable(), FRUITING_RED_HYPHAE));
     public static final Block FRUITING_BROWN_HYPHAE = registerBlock("fruiting_brown_hyphae", new FruitingHyphaeVVBlock(
-            FabricBlockSettings.copyOf(BROWN_MUSHROOM).burnable().ignitedByLava()));
+            FabricBlockSettings.copyOf(BROWN_MUSHROOM).burnable()));
     public static final Block BROWN_HYPHAE = registerBlock("brown_hyphae", new BonemealableVVBlock(
-            FabricBlockSettings.copyOf(BROWN_MUSHROOM).burnable().ignitedByLava(), FRUITING_BROWN_HYPHAE));
+            FabricBlockSettings.copyOf(BROWN_MUSHROOM).burnable(), FRUITING_BROWN_HYPHAE));
     public static final Block DEAD_CREEPS = registerBlock("dead_creeps", new SpreadableVVBlock(
-            FabricBlockSettings.copyOf(DEAD_BUSH).burnable().ignitedByLava()));
+            FabricBlockSettings.copyOf(DEAD_BUSH).burnable()));
     public static final Block ARCHAIC_CREEPS = registerBlock("archaic_creeps", new SpreadableVVBlock(
-            FabricBlockSettings.copyOf(Blocks.SOUL_SAND).burnable().sound(SoundType.GRASS).ignitedByLava()));
+            FabricBlockSettings.copyOf(Blocks.SOUL_SAND).burnable().sound(SoundType.GRASS)));
     public static final Block ROOT_CREEPS = registerBlock("root_creeps", new SpreadableVVBlock(
-            FabricBlockSettings.copyOf(HANGING_ROOTS).burnable().ignitedByLava()));
+            FabricBlockSettings.copyOf(HANGING_ROOTS).burnable()));
     public static final Block MYCELIUM_HYPHAE = registerBlock("mycelium_hyphae",
             new SpreadableVVBlock(FabricBlockSettings.copyOf(MYCELIUM).burnable().instabreak()));
     public static final Block BUDDING_CRIMSON_HYPHAE_SHOOTS = registerBlock("budding_crimson_hyphae_shoots",
-            new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).instabreak().ignitedByLava(),
+            new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).instabreak(),
                     Items.CRIMSON_FUNGUS.getDefaultInstance()));
     public static final Block CRIMSON_HYPHAE_SHOOTS = registerBlock("crimson_hyphae_shoots",
-            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).instabreak().ignitedByLava(),
+            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).instabreak(),
                     BUDDING_CRIMSON_HYPHAE_SHOOTS));
     public static final Block BUDDING_WARPED_HYPHAE_SHOOTS = registerBlock("budding_warped_hyphae_shoots",
-            new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE).instabreak().ignitedByLava(),
+            new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE).instabreak(),
                     Items.WARPED_FUNGUS.getDefaultInstance()));
     public static final Block WARPED_HYPHAE_SHOOTS = registerBlock("warped_hyphae_shoots",
-            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE).instabreak().ignitedByLava(),
+            new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE).instabreak(),
                     BUDDING_WARPED_HYPHAE_SHOOTS));
+
     public static final Block OAK_FOLIAGE = registerBlock("oak_foliage",
             new BaseVVBlock(FabricBlockSettings.copyOf(OAK_LEAVES).instabreak()));
     public static final Block SPRUCE_FOLIAGE = registerBlock("spruce_foliage",
@@ -224,29 +231,28 @@ public class VVBlocks {
             FabricBlockSettings.copyOf(FLOWERING_AZALEA_LEAVES).instabreak()));
     public static final Block FRUITING_GLOWBERRY_CREEPS = registerBlock("fruiting_glowberry_creeps",
             new FruitingGlowberryCreepsBlock(FabricBlockSettings.of().lightLevel(14).mapColor(MapColor.PLANT)
-                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)
-                    .ignitedByLava()));
+                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)));
     public static final Block GLOWBERRY_CREEPS = registerBlock("glowberry_creeps",
             new GlowberryCreepsBlock(FabricBlockSettings.of().lightLevel(0).mapColor(MapColor.PLANT)
-                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)
-                    .ignitedByLava()));
+                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)));
     public static final Block BARE_GLOWBERRY_CREEPS = registerBlock("bare_glowberry_creeps",
             new BonemealableVVBlock(FabricBlockSettings.of().lightLevel(0).mapColor(MapColor.PLANT)
-                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)
-                    .ignitedByLava(), GLOWBERRY_CREEPS));
+                    .noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY),
+                    GLOWBERRY_CREEPS));
     public static final Block FRUITING_SWEET_BERRY_FOLIAGE = registerBlock("fruiting_sweet_berry_foliage",
-            new FrutingSweetBerryFoliage(FabricBlockSettings.copyOf(SWEET_BERRY_BUSH).ignitedByLava()));
+            new FrutingSweetBerryFoliage(FabricBlockSettings.copyOf(SWEET_BERRY_BUSH).burnable()));
     public static final Block SWEET_BERRY_FOLIAGE = registerBlock("sweet_berry_foliage",
             new BonemealableVVBlock(FabricBlockSettings.copyOf(SWEET_BERRY_BUSH).mapColor(MapColor.PLANT)
-                    .ignitedByLava(), FRUITING_SWEET_BERRY_FOLIAGE));
+                    .burnable(), FRUITING_SWEET_BERRY_FOLIAGE));
     public static final Block BAMBOO_FOLIAGE = registerBlock("bamboo_foliage", new BaseVVBlock(FabricBlockSettings
-            .copyOf(BAMBOO).instabreak().ignitedByLava()));
+            .copyOf(BAMBOO).instabreak()));
     public static final Block GRASS_SHOOTS = registerBlock("grass_shoots", new BaseVVBlock(FabricBlockSettings
             .copyOf(GRASS_BLOCK).burnable().instabreak()));
     public static final Block MOSS_CLUMPS = registerBlock("moss_clumps", new SpreadableVVBlock(FabricBlockSettings
             .copyOf(MOSS_BLOCK).burnable()));
     public static final Block MOSS_GROWTH = registerBlock("moss_growth", new SpreadableVVBlock(FabricBlockSettings
             .copyOf(MOSS_BLOCK).burnable()));
+
     public static final Block AQUA_GOO_NODES = registerBlock("aqua_goo_nodes",
             new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
                     .mapColor(MapColor.COLOR_CYAN).lightLevel(4).sound(SoundType.SLIME_BLOCK)));
@@ -271,80 +277,86 @@ public class VVBlocks {
     public static final Block VERDANT_GOO_HYPHAE = registerBlock("verdant_goo_hyphae",
             new SpreadableVVBlock(FabricBlockSettings.of().strength(0.2f, 0.2f).requiresTool()
                     .mapColor(MapColor.GLOW_LICHEN).lightLevel(8).sound(SoundType.SLIME_BLOCK)));
-    public static final Block BEACHED_KELP = registerBlock("beached_kelp", new WaterloggableVVBlock(FabricBlockSettings.of()
-            .burnable().strength(0.2f, 0.2f).requiresTool().mapColor(MapColor.COLOR_GREEN).sound(SoundType.WET_GRASS)));
+
+    public static final Block BEACHED_KELP = registerBlock("beached_kelp",
+            new WaterloggableVVBlock(FabricBlockSettings.of()
+                    .burnable().strength(0.2f, 0.2f).requiresTool().mapColor(MapColor.COLOR_GREEN)
+                    .sound(SoundType.WET_GRASS)));
     public static final Block BEACHED_SEAGRASS = registerBlock("beached_seagrass",
             new WaterloggableVVBlock(FabricBlockSettings.of().burnable().strength(0.2f, 0.2f).requiresTool()
                     .mapColor(MapColor.COLOR_GREEN).sound(SoundType.WET_GRASS)));
+
     public static final Block OAK_CREEPS = registerBlock("oak_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(OAK_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(OAK_WOOD).burnable()));
     public static final Block STRIPPED_OAK_CREEPS = registerBlock("stripped_oak_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_OAK_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_OAK_WOOD).burnable()));
     public static final Block BIRCH_CREEPS = registerBlock("birch_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(BIRCH_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(BIRCH_WOOD).burnable()));
     public static final Block STRIPPED_BIRCH_CREEPS = registerBlock("stripped_birch_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_BIRCH_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_BIRCH_WOOD).burnable()));
     public static final Block SPRUCE_CREEPS = registerBlock("spruce_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(SPRUCE_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(SPRUCE_WOOD).burnable()));
     public static final Block STRIPPED_SPRUCE_CREEPS = registerBlock("stripped_spruce_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_SPRUCE_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_SPRUCE_WOOD).burnable()));
     public static final Block JUNGLE_CREEPS = registerBlock("jungle_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(JUNGLE_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(JUNGLE_WOOD).burnable()));
     public static final Block STRIPPED_JUNGLE_CREEPS = registerBlock("stripped_jungle_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_JUNGLE_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_JUNGLE_WOOD).burnable()));
     public static final Block DARK_OAK_CREEPS = registerBlock("dark_oak_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(DARK_OAK_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(DARK_OAK_WOOD).burnable()));
     public static final Block STRIPPED_DARK_OAK_CREEPS = registerBlock("stripped_dark_oak_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_DARK_OAK_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_DARK_OAK_WOOD).burnable()));
     public static final Block ACACIA_CREEPS = registerBlock("acacia_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(ACACIA_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(ACACIA_WOOD).burnable()));
     public static final Block STRIPPED_ACACIA_CREEPS = registerBlock("stripped_acacia_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_ACACIA_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_ACACIA_WOOD).burnable()));
     public static final Block MANGROVE_CREEPS = registerBlock("mangrove_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(MANGROVE_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(MANGROVE_WOOD).burnable()));
     public static final Block STRIPPED_MANGROVE_CREEPS = registerBlock("stripped_mangrove_creeps",
             new WaterloggableVVBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED)
-                    .instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+                    .instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD)));
     public static final Block CHERRY_CREEPS = registerBlock("cherry_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(CHERRY_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(CHERRY_WOOD).burnable()));
     public static final Block STRIPPED_CHERRY_CREEPS = registerBlock("stripped_cherry_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_CHERRY_WOOD).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_CHERRY_WOOD).burnable()));
     public static final Block WARPED_CREEPS = registerBlock("warped_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(WARPED_HYPHAE_SHOOTS).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(WARPED_HYPHAE_SHOOTS).burnable()));
     public static final Block STRIPPED_WARPED_CREEPS = registerBlock("stripped_warped_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_WARPED_HYPHAE).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_WARPED_HYPHAE).burnable()));
     public static final Block CRIMSON_CREEPS = registerBlock("crimson_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).burnable()));
     public static final Block STRIPPED_CRIMSON_CREEPS = registerBlock("stripped_crimson_creeps",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_CRIMSON_HYPHAE).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(STRIPPED_CRIMSON_HYPHAE).burnable()));
+
     public static final Block GRIME = registerBlock("grime", new BaseVVBlock(
             FabricBlockSettings.of().instabreak().mapColor(MapColor.COLOR_GRAY).sound(SoundType.SNOW)));
     public static final Block RUST = registerBlock("rust", new WaterloggableVVBlock(
             FabricBlockSettings.of().instabreak().mapColor(MapColor.COLOR_ORANGE).sound(SoundType.SNOW)));
-    public static final Block DUST = registerBlock("dust", new BaseVVBlock(FabricBlockSettings.of().hardness(0)
-            .resistance(0).mapColor(MapColor.COLOR_LIGHT_GRAY).sound(SoundType.SNOW)));
+    public static final Block DUST = registerBlock("dust", new BaseVVBlock(
+            FabricBlockSettings.of().instabreak().mapColor(MapColor.COLOR_LIGHT_GRAY).sound(SoundType.SNOW)));
+
     public static final Block SHODDY_OAK_PLANKS = registerBlock("shoddy_oak_planks",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(OAK_PLANKS).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(OAK_PLANKS).burnable()));
     public static final Block SHODDY_BIRCH_PLANKS = registerBlock("shoddy_birch_planks",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(BIRCH_PLANKS).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(BIRCH_PLANKS).burnable()));
     public static final Block SHODDY_SPRUCE_PLANKS = registerBlock("shoddy_spruce_planks",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(SPRUCE_PLANKS).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(SPRUCE_PLANKS).burnable()));
     public static final Block SHODDY_JUNGLE_PLANKS = registerBlock("shoddy_jungle_planks",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(JUNGLE_PLANKS).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(JUNGLE_PLANKS).burnable()));
     public static final Block SHODDY_ACACIA_PLANKS = registerBlock("shoddy_acacia_planks",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(ACACIA_PLANKS).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(ACACIA_PLANKS).burnable()));
     public static final Block SHODDY_DARK_OAK_PLANKS = registerBlock("shoddy_dark_oak_planks",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(DARK_OAK_PLANKS).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(DARK_OAK_PLANKS).burnable()));
     public static final Block SHODDY_MANGROVE_PLANKS = registerBlock("shoddy_mangrove_planks",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(MANGROVE_PLANKS).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(MANGROVE_PLANKS).burnable()));
     public static final Block SHODDY_CHERRY_PLANKS = registerBlock("shoddy_cherry_planks",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(CHERRY_PLANKS).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(CHERRY_PLANKS).burnable()));
     public static final Block SHODDY_CRIMSON_PLANKS = registerBlock("shoddy_crimson_planks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(CRIMSON_PLANKS)));
     public static final Block SHODDY_WARPED_PLANKS = registerBlock("shoddy_warped_planks",
             new WaterloggableVVBlock(FabricBlockSettings.copyOf(WARPED_PLANKS)));
     public static final Block SHODDY_BAMBOO_PLANKS = registerBlock("shoddy_bamboo_planks",
-            new WaterloggableVVBlock(FabricBlockSettings.copyOf(BAMBOO_PLANKS).ignitedByLava()));
+            new WaterloggableVVBlock(FabricBlockSettings.copyOf(BAMBOO_PLANKS).burnable()));
 
     public static void initialize() {
         ((SpreadableVVBlock) FRUITING_GLOWBERRY_CREEPS).setSpreadBlock((BaseVVBlock) GLOWBERRY_CREEPS);
