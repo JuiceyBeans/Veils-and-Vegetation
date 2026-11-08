@@ -7,6 +7,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -17,14 +18,14 @@ import net.minecraft.world.phys.BlockHitResult;
 public class BuddingHyphaeVVBlock extends SpreadableVVBlock {
 
     private Block strippedBlock;
-    private final ItemStack droppedItem;
+    private final Item droppedItem;
 
-    public BuddingHyphaeVVBlock(Properties properties, ItemStack droppedItem, boolean canBeReplaced) {
+    public BuddingHyphaeVVBlock(Properties properties, Item droppedItem, boolean canBeReplaced) {
         super(properties, canBeReplaced);
         this.droppedItem = droppedItem;
     }
 
-    public BuddingHyphaeVVBlock(Properties properties, ItemStack droppedItem) {
+    public BuddingHyphaeVVBlock(Properties properties, Item droppedItem) {
         this(properties, droppedItem, true);
     }
 
@@ -38,7 +39,7 @@ public class BuddingHyphaeVVBlock extends SpreadableVVBlock {
         var stack = player.getItemInHand(hand);
         if (stack.is(ItemTags.AXES) || stack.is(Items.SHEARS)) {
             if (!level.isClientSide()) {
-                popResource(level, pos, this.droppedItem);
+                popResource(level, pos, new ItemStack(this.droppedItem));
                 level.setBlock(pos, strippedBlock.withPropertiesOf(state), Block.UPDATE_ALL);
             } else {
                 level.playSound(player, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);

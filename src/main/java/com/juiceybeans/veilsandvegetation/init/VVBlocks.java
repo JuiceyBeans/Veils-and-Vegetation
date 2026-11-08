@@ -198,13 +198,13 @@ public class VVBlocks {
             new SpreadableVVBlock(FabricBlockSettings.copyOf(MYCELIUM).burnable().instabreak(), true));
     public static final Block BUDDING_CRIMSON_HYPHAE_SHOOTS = registerBlock("budding_crimson_hyphae_shoots",
             new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).instabreak(),
-                    Items.CRIMSON_FUNGUS.getDefaultInstance()));
+                    Items.CRIMSON_FUNGUS));
     public static final Block CRIMSON_HYPHAE_SHOOTS = registerBlock("crimson_hyphae_shoots",
             new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE).instabreak(),
                     BUDDING_CRIMSON_HYPHAE_SHOOTS, true));
     public static final Block BUDDING_WARPED_HYPHAE_SHOOTS = registerBlock("budding_warped_hyphae_shoots",
             new BuddingHyphaeVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE).instabreak(),
-                    Items.WARPED_FUNGUS.getDefaultInstance()));
+                    Items.WARPED_FUNGUS));
     public static final Block WARPED_HYPHAE_SHOOTS = registerBlock("warped_hyphae_shoots",
             new BonemealableVVBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE).instabreak(),
                     BUDDING_WARPED_HYPHAE_SHOOTS, true));
