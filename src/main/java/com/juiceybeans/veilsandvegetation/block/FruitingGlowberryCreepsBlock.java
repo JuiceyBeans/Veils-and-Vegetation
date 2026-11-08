@@ -17,7 +17,7 @@ import net.minecraft.world.phys.BlockHitResult;
 public class FruitingGlowberryCreepsBlock extends SpreadableVVBlock {
 
     public FruitingGlowberryCreepsBlock(Properties properties) {
-        super(properties);
+        super(properties, true);
         this.setSpreadBlock((BaseVVBlock) VVBlocks.GLOWBERRY_CREEPS);
     }
 

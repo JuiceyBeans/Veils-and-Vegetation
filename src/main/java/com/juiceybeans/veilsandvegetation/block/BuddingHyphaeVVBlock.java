@@ -19,9 +19,13 @@ public class BuddingHyphaeVVBlock extends SpreadableVVBlock {
     private Block strippedBlock;
     private final ItemStack droppedItem;
 
-    public BuddingHyphaeVVBlock(Properties properties, ItemStack droppedItem) {
-        super(properties);
+    public BuddingHyphaeVVBlock(Properties properties, ItemStack droppedItem, boolean canBeReplaced) {
+        super(properties, canBeReplaced);
         this.droppedItem = droppedItem;
+    }
+
+    public BuddingHyphaeVVBlock(Properties properties, ItemStack droppedItem) {
+        this(properties, droppedItem, true);
     }
 
     public void setStrippedBlock(Block strippedBlock) {

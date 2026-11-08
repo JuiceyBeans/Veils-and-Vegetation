@@ -17,7 +17,7 @@ import net.minecraft.world.phys.BlockHitResult;
 public class RoseCreepsBlock extends SpreadableVVBlock {
 
     public RoseCreepsBlock(Properties properties) {
-        super(properties);
+        super(properties, false);
     }
 
     @Override

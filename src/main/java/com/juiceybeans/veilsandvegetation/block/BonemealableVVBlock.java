@@ -13,9 +13,13 @@ public class BonemealableVVBlock extends WaterloggableVVBlock implements Bonemea
 
     private final Block bonemealedBlock;
 
-    public BonemealableVVBlock(Properties properties, Block bonemealedBlock) {
-        super(properties);
+    public BonemealableVVBlock(Properties properties, Block bonemealedBlock, boolean canBeReplaced) {
+        super(properties, canBeReplaced);
         this.bonemealedBlock = bonemealedBlock;
+    }
+
+    public BonemealableVVBlock(Properties properties, Block bonemealedBlock) {
+        this(properties, bonemealedBlock, false);
     }
 
     @Override

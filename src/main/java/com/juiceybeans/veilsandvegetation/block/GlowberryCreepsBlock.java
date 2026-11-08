@@ -17,7 +17,7 @@ import net.minecraft.world.phys.BlockHitResult;
 public class GlowberryCreepsBlock extends BonemealableVVBlock {
 
     public GlowberryCreepsBlock(Properties properties) {
-        super(properties, VVBlocks.FRUITING_GLOWBERRY_CREEPS);
+        super(properties, VVBlocks.FRUITING_GLOWBERRY_CREEPS, true);
     }
 
     @Override

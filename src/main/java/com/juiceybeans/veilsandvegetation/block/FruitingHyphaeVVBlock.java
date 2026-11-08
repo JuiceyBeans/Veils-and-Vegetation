@@ -17,7 +17,7 @@ public class FruitingHyphaeVVBlock extends SpreadableVVBlock {
     private Block shearedBlock;
 
     public FruitingHyphaeVVBlock(Properties properties) {
-        super(properties);
+        super(properties, true);
     }
 
     public void setShearedBlock(Block strippedBlock) {

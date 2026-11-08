@@ -10,9 +10,13 @@ public class CopperVVBlock extends WaterloggableVVBlock implements WeatheringCop
 
     private final WeatheringCopper.WeatherState weatherState;
 
-    public CopperVVBlock(Properties properties, WeatherState weatherState) {
-        super(properties);
+    public CopperVVBlock(Properties properties, WeatherState weatherState, boolean canBeReplaced) {
+        super(properties, canBeReplaced);
         this.weatherState = weatherState;
+    }
+
+    public CopperVVBlock(Properties properties, WeatherState weatherState) {
+        this(properties, weatherState, false);
     }
 
     @Override

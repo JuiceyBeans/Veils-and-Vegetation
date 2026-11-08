@@ -17,15 +17,18 @@ public class WaterloggableVVBlock extends BaseVVBlock implements SimpleWaterlogg
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     private final boolean isWaterloggable;
 
-    public WaterloggableVVBlock(Properties properties) {
-        super(properties);
+    public WaterloggableVVBlock(Properties properties, boolean isWaterloggable, boolean canBeReplaced) {
+        super(properties, canBeReplaced);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, false));
-        this.isWaterloggable = true;
+        this.isWaterloggable = isWaterloggable;
     }
 
-    public WaterloggableVVBlock(Properties properties, boolean isWaterloggable) {
-        super(properties);
-        this.isWaterloggable = isWaterloggable;
+    public WaterloggableVVBlock(Properties properties, boolean canBeReplaced) {
+        this(properties, true, canBeReplaced);
+    }
+
+    public WaterloggableVVBlock(Properties properties) {
+        this(properties, false);
     }
 
     @Override

@@ -15,10 +15,14 @@ public class SpreadableVVBlock extends BaseVVBlock implements BonemealableBlock 
     private MultifaceSpreader spreader;
     private BaseVVBlock spreadBlock;
 
-    public SpreadableVVBlock(Properties properties) {
-        super(properties);
+    public SpreadableVVBlock(Properties properties, boolean canBeReplaced) {
+        super(properties, canBeReplaced);
         this.spreadBlock = this;
         this.spreader = new MultifaceSpreader(spreadBlock);
+    }
+
+    public SpreadableVVBlock(Properties properties) {
+        this(properties, false);
     }
 
     public void setSpreadBlock(BaseVVBlock spreadBlock) {

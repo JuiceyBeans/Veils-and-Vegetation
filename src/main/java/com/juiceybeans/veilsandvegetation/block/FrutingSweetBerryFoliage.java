@@ -17,7 +17,7 @@ import net.minecraft.world.phys.BlockHitResult;
 public class FrutingSweetBerryFoliage extends BaseVVBlock {
 
     public FrutingSweetBerryFoliage(Properties properties) {
-        super(properties);
+        super(properties, true);
     }
 
     @Override
