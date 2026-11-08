@@ -30,6 +30,12 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         Set<Block> dropNothing = Set.of(
+                GRIME,
+                RUST,
+                DUST
+        );
+
+        Set<Block> silkTouchOnly = Set.of(
                 COBBLESTONE_CHUNKS,
                 MOSSY_COBBLESTONE_CHUNKS,
                 PRISMARINE_CHUNKS,
@@ -52,14 +58,12 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
                 SOUL_SOIL_SMATTERING,
                 SOUL_SAND_SMATTERING,
                 FRUITING_GLOWBERRY_CREEPS,
-                FRUITING_SWEET_BERRY_FOLIAGE,
-                GRIME,
-                RUST,
-                DUST
+                FRUITING_SWEET_BERRY_FOLIAGE
         );
 
         for (Block block : blocks) {
             if (!dropNothing.contains(block)) this.dropSelfMultiface(block);
+            if (silkTouchOnly.contains(block)) this.dropWhenSilkTouch(block);
         }
 
         dropOtherMultiface(TACKED_NOTES, Items.PAPER, 2.0f);
@@ -67,9 +71,9 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
         dropOtherMultiface(SPLAYED_LEATHER, Items.LEATHER);
         dropOtherMultiface(SPLAYED_HIDE, Items.RABBIT_HIDE); //todo check if rabbit hide is right
 
-        dropOtherMultiface(COPPER_ORE_FRAGMENTS, Items.COPPER_ORE);
-        dropOtherMultiface(IRON_ORE_FRAGMENTS, Items.IRON_ORE);
-        dropOtherMultiface(GOLD_ORE_FRAGMENTS, Items.GOLD_ORE);
+        dropOtherMultiface(COPPER_ORE_FRAGMENTS, Items.RAW_COPPER);
+        dropOtherMultiface(IRON_ORE_FRAGMENTS, Items.RAW_IRON);
+        dropOtherMultiface(GOLD_ORE_FRAGMENTS, Items.RAW_GOLD);
         dropOtherMultiface(NETHER_QUARTZ_FRAGMENTS, Items.QUARTZ);
         dropOtherMultiface(EMERALD_FRAGMENTS, Items.EMERALD);
         dropOtherMultiface(DIAMOND_FRAGMENTS, Items.DIAMOND);
@@ -123,7 +127,7 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
 
         createShearsOrSilkTouchOrFixedDropTable(NETHER_WART_SPROUTS, Items.NETHER_WART);
         createShearsOrSilkTouchTable(CRIMSON_VINES);
-        createShearsOrSilkTouchTable(ROSE_CREEPS);
+        createRoseCreepsTable(ROSE_CREEPS);
         createShearsOrSilkTouchTable(ROSE_VINES);
         createShearsOrSilkTouchTable(WARPED_GROWTHS);
         createShearsOrSilkTouchTable(WARPED_VINES);
@@ -149,6 +153,8 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
 
         createShearsOrSilkTouchTable(GLOWBERRY_CREEPS);
         createShearsOrSilkTouchTable(BARE_GLOWBERRY_CREEPS);
+        createFruitingShearedTable(FRUITING_GLOWBERRY_CREEPS, GLOWBERRY_CREEPS);
+        createFruitingShearedTable(FRUITING_SWEET_BERRY_FOLIAGE, SWEET_BERRY_FOLIAGE);
         createShearsOrSilkTouchTable(BAMBOO_FOLIAGE);
         createShearsOrSilkTouchTable(MOSS_CLUMPS);
         createShearsOrSilkTouchTable(MOSS_GROWTH);
@@ -330,5 +336,50 @@ public class VVLootTableGenerator extends FabricBlockLootTableProvider {
                 .withPool(this.applyExplosionCondition(block, blockPool));
 
         this.add(block, builder);
+    }
+
+    private void createFruitingShearedTable(Block fruiting, Block sheared) {
+        var builder = LootTable.lootTable().withPool(this.applyExplosionCondition(fruiting, LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0f))
+                .add(LootItem.lootTableItem(sheared).when(HAS_SHEARS_OR_SILK_TOUCH))
+                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0)))));
+
+        for (Direction dir : Direction.values()) {
+            BooleanProperty prop = PipeBlock.PROPERTY_BY_DIRECTION.get(dir);
+            if (fruiting.getStateDefinition().getProperties().contains(prop)) {
+                builder.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f), true)
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(fruiting)
+                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(prop, true))));
+            }
+        }
+
+        this.add(fruiting, builder);
+    }
+
+    private void createRoseCreepsTable(Block block) {
+        LootPool.Builder blockPool = LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0f))
+                .add(LootItem.lootTableItem(block)
+                        .when(HAS_SHEARS_OR_SILK_TOUCH))
+                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(0)));
+
+        LootPool.Builder rosePool = LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0f))
+                .add(LootItem.lootTableItem(Items.ROSE_BUSH)
+                        .when(HAS_SHEARS_OR_SILK_TOUCH.invert())
+                        .when(LootItemRandomChanceCondition.randomChance(0.5f)));
+
+        for (Direction dir : Direction.values()) {
+            BooleanProperty prop = PipeBlock.PROPERTY_BY_DIRECTION.get(dir);
+            if (block.getStateDefinition().getProperties().contains(prop)) {
+                blockPool.apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f), true)
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(prop, true))));
+            }
+        }
+
+        this.add(block, LootTable.lootTable()
+                .withPool(this.applyExplosionCondition(block, blockPool))
+                .withPool(this.applyExplosionCondition(Items.ROSE_BUSH, rosePool)));
     }
 }

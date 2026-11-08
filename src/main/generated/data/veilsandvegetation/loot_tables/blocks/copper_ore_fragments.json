@@ -97,7 +97,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:copper_ore"
+          "name": "minecraft:raw_copper"
         }
       ],
       "functions": [
